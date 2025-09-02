@@ -1,0 +1,815 @@
+ID	Large_category	Small_category	Origin	Type	Name	Components
+M00013	Carbohydrate metabolism	Other carbohydrate metabolism	Fungi	Pathway	"Malonate semialdehyde pathway, propanoyl-CoA => acetyl-CoA"	5
+M00030	Amino acid metabolism	Lysine metabolism	Fungi	Pathway	"Lysine biosynthesis, AAA pathway, 2-oxoglutarate => 2-aminoadipate => lysine"	8
+M00055	Glycan metabolism	Glycan biosynthesis	Fungi	Pathway	N-glycan precursor biosynthesis	13
+M00065	Glycan metabolism	Glycan biosynthesis	Fungi	Pathway	"GPI-anchor biosynthesis, core oligosaccharide"	8
+M00072	Glycan metabolism	Glycan biosynthesis	Fungi	Pathway	N-glycosylation by oligosaccharyltransferase	1
+M00073	Glycan metabolism	Glycan biosynthesis	Fungi	Pathway	N-glycan precursor trimming	3
+M00074	Glycan metabolism	Glycan biosynthesis	Fungi	Pathway	"N-glycan biosynthesis, high-mannose type"	6
+M00081	Carbohydrate metabolism	Other carbohydrate metabolism	Fungi	Pathway	Pectin degradation	3
+M00085	Lipid metabolism	Fatty acid biosynthesis and degradation	Fungi	Pathway	"Fatty acid biosynthesis, elongation, mitochondria"	3..4
+M00089	Lipid metabolism	Lipid metabolism	Fungi	Pathway	Triacylglycerol biosynthesis	4..5
+M00090	Lipid metabolism	Lipid metabolism	Fungi	Pathway	"Phosphatidylcholine (PC) biosynthesis, choline => PC"	3
+M00092	Lipid metabolism	Lipid metabolism	Fungi	Pathway	"Phosphatidylethanolamine (PE) biosynthesis, ethanolamine => PE"	3
+M00094	Lipid metabolism	Lipid metabolism	Fungi	Pathway	Ceramide biosynthesis	4
+M00099	Lipid metabolism	Lipid metabolism	Fungi	Pathway	Sphingosine biosynthesis	5
+M00100	Lipid metabolism	Lipid metabolism	Fungi	Pathway	Sphingosine degradation	2
+M00101	Lipid metabolism	Sterol biosynthesis	Fungi	Pathway	"Cholesterol biosynthesis, squalene 2,3-epoxide => cholesterol"	10
+M00102	Lipid metabolism	Sterol biosynthesis	Fungi	Pathway	Ergocalciferol biosynthesis	5
+M00128	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Fungi	Pathway	"Ubiquinone biosynthesis, eukaryotes, 4-hydroxybenzoate => ubiquinone"	6
+M00141	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Fungi	Pathway	"C1-unit interconversion, eukaryotes"	2..3
+M00142	Energy metabolism	ATP synthesis	Fungi	Complex	"NADH:ubiquinone oxidoreductase, mitochondria"	7
+M00143	Energy metabolism	ATP synthesis	Fungi	Complex	"NADH dehydrogenase (ubiquinone) Fe-S protein/flavoprotein complex, mitochondria"	10
+M00148	Energy metabolism	ATP synthesis	Fungi	Complex	Succinate dehydrogenase (ubiquinone)	4
+M00152	Energy metabolism	ATP synthesis	Fungi	Complex	Cytochrome bc1 complex	9..10
+M00154	Energy metabolism	ATP synthesis	Fungi	Complex	Cytochrome c oxidase	15
+M00158	Energy metabolism	ATP synthesis	Fungi	Complex	"F-type ATPase, eukaryotes"	15
+M00160	Energy metabolism	ATP synthesis	Fungi	Complex	"V-type ATPase, eukaryotes"	13
+M00177	Genetic information processing	Ribosome	Fungi	Complex	"Ribosome, eukaryotes"	77
+M00180	Genetic information processing	RNA polymerase	Fungi	Complex	"RNA polymerase II, eukaryotes"	12
+M00181	Genetic information processing	RNA polymerase	Fungi	Complex	"RNA polymerase III, eukaryotes"	16
+M00182	Genetic information processing	RNA polymerase	Fungi	Complex	"RNA polymerase I, eukaryotes"	12
+M00261	Genetic information processing	DNA polymerase	Fungi	Complex	DNA polymerase alpha / primase complex	4
+M00262	Genetic information processing	DNA polymerase	Fungi	Complex	DNA polymerase delta complex	4
+M00263	Genetic information processing	DNA polymerase	Fungi	Complex	DNA polymerase epsilon complex	4
+M00284	Genetic information processing	Replication system	Fungi	Complex	Origin recognition complex	6
+M00285	Genetic information processing	Replication system	Fungi	Complex	MCM complex	6
+M00286	Genetic information processing	Replication system	Fungi	Complex	GINS complex	4
+M00288	Genetic information processing	Replication system	Fungi	Complex	RPA complex	3
+M00289	Genetic information processing	Replication system	Fungi	Complex	RF-C complex	3
+M00290	Genetic information processing	Repair system	Fungi	Complex	Holo-TFIIH complex	10
+M00291	Genetic information processing	Repair system	Fungi	Complex	MRN complex	3
+M00292	Genetic information processing	Repair system	Fungi	Complex	MRX complex	3
+M00293	Genetic information processing	DNA polymerase	Fungi	Complex	DNA polymerase zeta complex	2
+M00340	Genetic information processing	Proteasome	Fungi	Complex	"Proteasome, 20S core particle"	14
+M00341	Genetic information processing	Proteasome	Fungi	Complex	"Proteasome, 19S regulatory particle (PA700)"	19
+M00351	Genetic information processing	Spliceosome	Fungi	Complex	"Spliceosome, U1-snRNP"	10
+M00352	Genetic information processing	Spliceosome	Fungi	Complex	"Spliceosome, U2-snRNP"	20
+M00354	Genetic information processing	Spliceosome	Fungi	Complex	"Spliceosome, U4/U6.U5 tri-snRNP"	30
+M00355	Genetic information processing	Spliceosome	Fungi	Complex	"Spliceosome, 35S U5-snRNP"	31
+M00367	Biosynthesis of terpenoids and polyketides	Terpenoid backbone biosynthesis	Fungi	Pathway	"C10-C20 isoprenoid biosynthesis, non-plant eukaryotes"	3
+M00379	Genetic information processing	Ubiquitin system	Fungi	Complex	SCF-MET30 complex	4
+M00380	Genetic information processing	Ubiquitin system	Fungi	Complex	SCF-BTRC complex	4
+M00384	Genetic information processing	Ubiquitin system	Fungi	Complex	Cul3-SPOP complex	3
+M00386	Genetic information processing	Ubiquitin system	Fungi	Complex	Cul4-DDB1-CSA complex	4
+M00389	Genetic information processing	Ubiquitin system	Fungi	Complex	APC/C complex	12
+M00391	Genetic information processing	RNA processing	Fungi	Complex	"Exosome, eukaryotes"	10
+M00392	Genetic information processing	RNA processing	Fungi	Complex	Ski complex	3
+M00393	Genetic information processing	RNA processing	Fungi	Complex	TRAMP complex	3
+M00395	Genetic information processing	RNA processing	Fungi	Complex	Decapping complex	5
+M00396	Genetic information processing	Spliceosome	Fungi	Complex	Lsm 2-8 complex	7
+M00397	Genetic information processing	Spliceosome	Fungi	Complex	Lsm 1-7 complex	7
+M00398	Genetic information processing	Spliceosome	Fungi	Complex	Sm core complex	7
+M00399	Genetic information processing	Spliceosome	Fungi	Complex	Cap binding complex	2
+M00400	Genetic information processing	Protein processing	Fungi	Complex	p97-Ufd1-Npl4 complex	3
+M00401	Genetic information processing	Protein processing	Fungi	Complex	Sec61 complex	3
+M00404	Genetic information processing	Protein processing	Fungi	Complex	COPII complex	5
+M00407	Genetic information processing	Ubiquitin system	Fungi	Complex	SCF-CDC4 complex	4
+M00408	Genetic information processing	Protein processing	Fungi	Complex	ESCRT-0 complex	2
+M00410	Genetic information processing	Protein processing	Fungi	Complex	ESCRT-II complex	3
+M00411	Genetic information processing	Ubiquitin system	Fungi	Complex	SCF-GRR1 complex	4
+M00415	Lipid metabolism	Fatty acid biosynthesis and degradation	Fungi	Pathway	"Fatty acid biosynthesis, elongation, endoplasmic reticulum"	4
+M00425	Genetic information processing	RNA processing	Fungi	Complex	H/ACA ribonucleoprotein complex	4
+M00428	Genetic information processing	RNA processing	Fungi	Complex	eIF4F complex	3
+M00630	Carbohydrate metabolism	Other carbohydrate metabolism	Fungi	Pathway	"D-Galacturonate degradation (fungi), D-galacturonate => glycerol"	4
+M00661	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Fungi	Pathway	"Paspaline biosynthesis, geranylgeranyl-PP + indoleglycerol phosphate => paspaline"	3
+M00672	Biosynthesis of other secondary metabolites	beta-Lactam biosynthesis	Fungi	Pathway	"Penicillin biosynthesis, aminoadipate + cycteine + valine => penicillin"	3
+M00691	Cellular processes	Cell signaling	Fungi	FuncSet	DNA damage-induced cell cycle checkpoints	3
+M00692	Cellular processes	Cell signaling	Fungi	FuncSet	Cell cycle - G1/S transition	2
+M00693	Cellular processes	Cell signaling	Fungi	FuncSet	Cell cycle - G2/M transition	2
+M00695	Cellular processes	Cell signaling	Fungi	FuncSet	cAMP signaling	3
+M00861	Lipid metabolism	Fatty acid biosynthesis and degradation	Fungi	Pathway	"beta-Oxidation, peroxisome, VLCFA"	3
+M00014	Carbohydrate metabolism	Other carbohydrate metabolism	"	Animal"	Pathway	Glucuronate pathway (uronate pathway)	8
+M00037	Amino acid metabolism	Aromatic amino acid metabolism	"	Animal"	Pathway	"Melatonin biosynthesis, tryptophan => serotonin => melatonin"	4
+M00042	Amino acid metabolism	Aromatic amino acid metabolism	"	Animal"	Pathway	"Catecholamine biosynthesis, tyrosine => dopamine => noradrenaline => adrenaline"	4
+M00043	Amino acid metabolism	Aromatic amino acid metabolism	"	Animal"	Pathway	"Thyroid hormone biosynthesis, tyrosine => triiodothyronine/thyroxine"	1
+M00044	Amino acid metabolism	Aromatic amino acid metabolism	"	Animal"	Pathway	"Tyrosine degradation, tyrosine => homogentisate"	5
+M00056	Glycan metabolism	Glycan biosynthesis	"	Animal"	Pathway	"O-glycan biosynthesis, mucin type core"	4
+M00058	Glycan metabolism	Glycosaminoglycan metabolism	"	Animal"	Pathway	"Glycosaminoglycan biosynthesis, chondroitin sulfate backbone"	2
+M00059	Glycan metabolism	Glycosaminoglycan metabolism	"	Animal"	Pathway	"Glycosaminoglycan biosynthesis, heparan sulfate backbone"	5
+M00066	Lipid metabolism	Lipid metabolism	"	Animal"	Pathway	Lactosylceramide biosynthesis	2
+M00068	Glycan metabolism	Glycan biosynthesis	"	Animal"	Pathway	"Glycosphingolipid biosynthesis, globo-series, LacCer => Gb4Cer"	2
+M00069	Glycan metabolism	Glycan biosynthesis	"	Animal"	Pathway	"Glycosphingolipid biosynthesis, ganglio series, LacCer => GT3"	2
+M00070	Glycan metabolism	Glycan biosynthesis	"	Animal"	Pathway	"Glycosphingolipid biosynthesis, lacto-series, LacCer => Lc4Cer"	2
+M00071	Glycan metabolism	Glycan biosynthesis	"	Animal"	Pathway	"Glycosphingolipid biosynthesis, neolacto-series, LacCer => nLc4Cer"	2
+M00075	Glycan metabolism	Glycan biosynthesis	"	Animal"	Pathway	"N-glycan biosynthesis, complex type"	9
+M00077	Glycan metabolism	Glycosaminoglycan metabolism	"	Animal"	Pathway	Chondroitin sulfate degradation	4
+M00078	Glycan metabolism	Glycosaminoglycan metabolism	"	Animal"	Pathway	Heparan sulfate degradation	8
+M00385	Genetic information processing	Ubiquitin system	"	Animal/Plants"	Complex	Cul4-DDB1-DDB2 complex	4
+M00047	Amino acid metabolism	Arginine and proline metabolism	"	Animal/Protists"	Pathway	Creatine pathway	3
+M00402	Genetic information processing	Protein processing	"	Animal/Protists"	Complex	Translocon-associated protein (TRAP) complex	4
+M00403	Genetic information processing	Protein processing	"	Animal/Protists"	Complex	HRD1/SEL1 ERAD complex	10
+M00039	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	"	Plants"	Pathway	"Monolignol biosynthesis, phenylalanine/tyrosine => monolignol"	10
+M00076	Glycan metabolism	Glycosaminoglycan metabolism	 -	Pathway	Dermatan sulfate degradation	5
+M00079	Glycan metabolism	Glycosaminoglycan metabolism	 -	Pathway	Keratan sulfate degradation	4
+M00103	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	Cholecalciferol biosynthesis	2
+M00104	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	"Bile acid biosynthesis, cholesterol => cholate/chenodeoxycholate"	12
+M00106	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	"Conjugated bile acid biosynthesis, cholate => taurocholate/glycocholate"	2
+M00107	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	"Steroid hormone biosynthesis, cholesterol => prognenolone => progesterone"	2
+M00108	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	"C21-Steroid hormone biosynthesis, progesterone => corticosterone/aldosterone"	3
+M00109	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	"C21-Steroid hormone biosynthesis, progesterone => cortisol/cortisone"	4
+M00110	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	"C19/C18-Steroid hormone biosynthesis, pregnenolone => androstenedione => estrone"	3
+M00129	Carbohydrate metabolism	Other carbohydrate metabolism	Animal	Pathway	"Ascorbate biosynthesis, animals, glucose-1P => ascorbate"	7
+M00131	Carbohydrate metabolism	Other carbohydrate metabolism	Animal	Pathway	"Inositol phosphate metabolism, Ins(1,3,4,5)P4 => Ins(1,3,4)P3 => myo-inositol"	4
+M00146	Energy metabolism	ATP synthesis	Animal	Complex	NADH dehydrogenase (ubiquinone) 1 alpha subcomplex	14
+M00147	Energy metabolism	ATP synthesis	Animal	Complex	NADH dehydrogenase (ubiquinone) 1 beta subcomplex	13
+M00294	Genetic information processing	DNA polymerase	Animal	Complex	DNA polymerase gamma complex	2
+M00337	Genetic information processing	Proteasome	Animal	Complex	Immunoproteasome	16
+M00383	Genetic information processing	Ubiquitin system	Animal	Complex	ECV complex	5
+M00388	Genetic information processing	Ubiquitin system	Animal	Complex	ECS complex	5
+M00409	Genetic information processing	Protein processing	Animal	Complex	ESCRT-I complex	4
+M00413	Genetic information processing	Repair system	Animal	Complex	FA core complex	10
+M00424	Genetic information processing	Replication system	Animal	Complex	Shelterin complex	5
+M00427	Genetic information processing	RNA processing	Animal	Complex	Nuclear pore complex	33
+M00676	Cellular processes	Cell signaling	Animal	FuncSet	PI3K-Akt signaling	5
+M00677	Cellular processes	Cell signaling	Animal	FuncSet	Wnt signaling	6
+M00678	Cellular processes	Cell signaling	Animal	FuncSet	Hedgehog signaling	5
+M00679	Cellular processes	Cell signaling	Animal	FuncSet	BMP signaling	3
+M00680	Cellular processes	Cell signaling	Animal	FuncSet	TGF-beta signaling	3
+M00681	Cellular processes	Cell signaling	Animal	FuncSet	Activin signaling	3
+M00683	Cellular processes	Cell signaling	Animal	FuncSet	Hippo signaling	4
+M00684	Cellular processes	Cell signaling	Animal	FuncSet	JAK-STAT signaling	3
+M00685	Cellular processes	Cell signaling	Animal	FuncSet	Apoptotic machinery	3
+M00686	Cellular processes	Cell signaling	Animal	FuncSet	Toll-like receptor signaling	8
+M00688	Cellular processes	Cell signaling	Animal	FuncSet	MAPK (JNK) signaling	3
+M00862	Lipid metabolism	Sterol biosynthesis	Animal	Pathway	"beta-Oxidation, peroxisome, tri/dihydroxycholestanoyl-CoA => choloyl/chenodeoxycholoyl-CoA"	3
+M00353	Genetic information processing	Spliceosome	Animal/Plants	Complex	"Spliceosome, Prp19/CDC5L complex"	9
+M00382	Genetic information processing	Ubiquitin system	Animal/Plants	Complex	SCF-FBS complex	4
+M00430	Genetic information processing	RNA processing	Animal/Plants	Complex	Exon junction complex (EJC)	15
+M00132	Carbohydrate metabolism	Other carbohydrate metabolism	Animal/Plants/Protists	Pathway	"Inositol phosphate metabolism, Ins(1,3,4)P3 => phytate"	3
+M00170	Energy metabolism	Carbon fixation	Animal/Plants/Protists	Pathway	"C4-dicarboxylic acid cycle, phosphoenolpyruvate carboxykinase type"	4
+M00295	Genetic information processing	Repair system	Animal/Plants/Protists	Complex	BRCA1-associated genome surveillance complex (BASC)	14
+M00297	Genetic information processing	Repair system	Animal/Plants/Protists	Complex	DNA-PK complex	3
+M00381	Genetic information processing	Ubiquitin system	Animal/Plants/Protists	Complex	SCF-SKP2 complex	4
+M00387	Genetic information processing	Ubiquitin system	Animal/Plants/Protists	Complex	SCF-FBW7 complex	4
+M00405	Genetic information processing	RNA processing	Animal/Plants/Protists	Complex	THC complex	5
+M00406	Genetic information processing	RNA processing	Animal/Plants/Protists	Complex	TREX complex	8
+M00412	Genetic information processing	Protein processing	Animal/Plants/Protists	Complex	ESCRT-III complex	9
+M00414	Genetic information processing	Repair system	Animal/Plants/Protists	Complex	Bloom's syndrome complex	4
+M00687	Cellular processes	Cell signaling	Animal/Plants/Protists	FuncSet	MAPK (ERK1/2) signaling	3
+M00029	Amino acid metabolism	Arginine and proline metabolism	Animal/Protists	Pathway	Urea cycle	5
+M00032	Amino acid metabolism	Lysine metabolism	Animal/Protists	Pathway	"Lysine degradation, lysine => saccharopine => acetoacetyl-CoA"	6..8
+M00057	Glycan metabolism	Glycosaminoglycan metabolism	Animal/Protists	Pathway	"Glycosaminoglycan biosynthesis, linkage tetrasaccharide"	4
+M00067	Lipid metabolism	Lipid metabolism	Animal/Protists	Pathway	"Sulfoglycolipids biosynthesis, ceramide/1-alkyl-2-acylglycerol => sulfatide/seminolipid"	2
+M00130	Carbohydrate metabolism	Other carbohydrate metabolism	Animal/Protists	Pathway	"Inositol phosphate metabolism, PI=> PIP2 => Ins(1,4,5)P3 => Ins(1,3,4,5)P4"	4
+M00296	Genetic information processing	Repair system	Animal/Protists	Complex	BER complex	5
+M00426	Genetic information processing	RNA processing	Animal/Protists	Complex	Survival motor neuron (SMN) complex	2
+M00682	Cellular processes	Cell signaling	Animal/Protists	FuncSet	Notch signaling	3
+M00689	Cellular processes	Cell signaling	Animal/Protists	FuncSet	MAPK (p38) signaling	3
+M00690	Cellular processes	Cell signaling	Animal/Protists	FuncSet	MAPK (ERK5) signaling	3
+M00694	Cellular processes	Cell signaling	Animal/Protists	FuncSet	cGMP signaling	2
+M00842	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Animal/Protists	Pathway	"Tetrahydrobiopterin biosynthesis, GTP => BH4"	3
+M00097	Biosynthesis of terpenoids and polyketides	Other terpenoid biosynthesis	Plants	Pathway	"beta-Carotene biosynthesis, GGAP => beta-carotene"	6
+M00113	Lipid metabolism	Lipid metabolism	Plants	Pathway	Jasmonic acid biosynthesis	8
+M00114	Carbohydrate metabolism	Other carbohydrate metabolism	Plants	Pathway	"Ascorbate biosynthesis, plants, glucose-6P => ascorbate"	7..9
+M00137	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Plants	Pathway	"Flavanone biosynthesis, phenylalanine => naringenin"	5
+M00138	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Plants	Pathway	"Flavonoid biosynthesis, naringenin => pelargonidin"	3
+M00171	Energy metabolism	Carbon fixation	Plants	Pathway	"C4-dicarboxylic acid cycle, NAD - malic enzyme type"	7
+M00172	Energy metabolism	Carbon fixation	Plants	Pathway	"C4-dicarboxylic acid cycle, NADP - malic enzyme type"	4
+M00366	Biosynthesis of terpenoids and polyketides	Terpenoid backbone biosynthesis	Plants	Pathway	"C10-C20 isoprenoid biosynthesis, plants"	4
+M00368	Amino acid metabolism	Cysteine and methionine metabolism	Plants	Pathway	"Ethylene biosynthesis, methionine => ethylene"	3
+M00369	Amino acid metabolism	Other amino acid metabolism	Plants	Pathway	"Cyanogenic glycoside biosynthesis, tyrosine => dhurrin"	3
+M00370	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Plants	Pathway	"Glucosinolate biosynthesis, tryptophan => glucobrassicin"	5
+M00371	Biosynthesis of terpenoids and polyketides	Other terpenoid biosynthesis	Plants	Pathway	"Castasterone biosynthesis, campesterol => castasterone"	6
+M00372	Biosynthesis of terpenoids and polyketides	Other terpenoid biosynthesis	Plants	Pathway	"Abscisic acid biosynthesis, beta-carotene => abscisic acid"	5
+M00532	Carbohydrate metabolism	Other carbohydrate metabolism	Plants	Pathway	Photorespiration	10
+M00841	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Protists	Pathway	"Tetrahydrofolate biosynthesis, mediated by PTPS, GTP => THF"	6
+M00008	Carbohydrate metabolism	Central carbohydrate metabolism	Prokaryote	Pathway	"Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate"	4
+M00016	Amino acid metabolism	Lysine metabolism	Prokaryote	Pathway	"Lysine biosynthesis, succinyl-DAP pathway, aspartate => lysine"	9
+M00017	Amino acid metabolism	Cysteine and methionine metabolism	Prokaryote	Pathway	"Methionine biosynthesis, apartate => homoserine => methionine"	7
+M00025	Amino acid metabolism	Aromatic amino acid metabolism	Prokaryote	Pathway	"Tyrosine biosynthesis, chorismate => tyrosine"	2..3
+M00031	Amino acid metabolism	Lysine metabolism	Prokaryote	Pathway	"Lysine biosynthesis, mediated by LysW, 2-aminoadipate => lysine"	6
+M00033	Amino acid metabolism	Serine and threonine metabolism	Prokaryote	Pathway	"Ectoine biosynthesis, aspartate => ectoine"	5
+M00053	Nucleotide metabolism	Pyrimidine metabolism	Prokaryote	Pathway	"Pyrimidine deoxyribonuleotide biosynthesis, CDP/CTP => dCDP/dCTP,dTDP/dTTP"	8
+M00060	Glycan metabolism	Lipopolysaccharide metabolism	Prokaryote	Pathway	"KDO2-lipid A biosynthesis, Raetz pathway, LpxL-LpxM type"	9
+M00061	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	"D-Glucuronate degradation, D-glucuronate => pyruvate + D-glyceraldehyde 3P"	5
+M00063	Glycan metabolism	Lipopolysaccharide metabolism	Prokaryote	Pathway	CMP-KDO biosynthesis	4
+M00064	Glycan metabolism	Lipopolysaccharide metabolism	Prokaryote	Pathway	ADP-L-glycero-D-manno-heptose biosynthesis	5
+M00088	Lipid metabolism	Lipid metabolism	Prokaryote	Pathway	"Ketone body biosynthesis, acetyl-CoA => acetoacetate/3-hydroxybutyrate/acetone"	5
+M00116	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Menaquinone biosynthesis, chorismate => menaquinol"	2..4
+M00117	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Ubiquinone biosynthesis, prokaryotes, chorismate => ubiquinone"	9
+M00119	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Pantothenate biosynthesis, valine/L-aspartate => pantothenate"	5
+M00122	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Cobalamin biosynthesis, cobinamide => cobalamin"	7
+M00124	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Pyridoxal biosynthesis, erythrose-4P => pyridoxal-5P"	6
+M00127	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Thiamine biosynthesis, AIR => thiamine-P/thiamine-2P"	5
+M00136	Amino acid metabolism	Polyamine biosynthesis	Prokaryote	Pathway	"GABA biosynthesis, prokaryotes, putrescine => GABA"	4
+M00140	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"C1-unit interconversion, prokaryotes"	3..4
+M00144	Energy metabolism	ATP synthesis	Prokaryote	Complex	"NADH:quinone oxidoreductase, prokaryotes"	11..14
+M00149	Energy metabolism	ATP synthesis	Prokaryote	Complex	"Succinate dehydrogenase, prokaryotes"	4
+M00150	Energy metabolism	ATP synthesis	Prokaryote	Complex	"Fumarate reductase, prokaryotes"	4
+M00153	Energy metabolism	ATP synthesis	Prokaryote	Complex	Cytochrome bd ubiquinol oxidase	3
+M00155	Energy metabolism	ATP synthesis	Prokaryote	Complex	"Cytochrome c oxidase, prokaryotes"	2..3
+M00156	Energy metabolism	ATP synthesis	Prokaryote	Complex	"Cytochrome c oxidase, cbb3-type"	3..4
+M00157	Energy metabolism	ATP synthesis	Prokaryote	Complex	"F-type ATPase, prokaryotes and chloroplasts"	8
+M00159	Energy metabolism	ATP synthesis	Prokaryote	Complex	"V/A-type ATPase, prokaryotes"	9
+M00162	Energy metabolism	ATP synthesis	Prokaryote	Complex	Cytochrome b6f complex	8
+M00173	Energy metabolism	Carbon fixation	Prokaryote	Pathway	Reductive citrate cycle (Arnon-Buchanan cycle)	10..12
+M00174	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Methane oxidation, methanotroph, methane => formaldehyde"	2
+M00175	Energy metabolism	Nitrogen metabolism	Prokaryote	Pathway	"Nitrogen fixation, nitrogen => ammonia"	1
+M00178	Genetic information processing	Ribosome	Prokaryote	Complex	"Ribosome, bacteria"	52
+M00179	Genetic information processing	Ribosome	Prokaryote	Complex	"Ribosome, archaea"	58
+M00183	Genetic information processing	RNA polymerase	Prokaryote	Complex	"RNA polymerase, bacteria"	3..4
+M00184	Genetic information processing	RNA polymerase	Prokaryote	Complex	"RNA polymerase, archaea"	12..13
+M00186	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Tungstate transport system	3
+M00188	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	NitT/TauT family transport system	3
+M00189	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Molybdate transport system	3
+M00190	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Iron(III) transport system	3
+M00191	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Thiamine transport system	3
+M00192	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Putative thiamine transport system	3
+M00193	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Putative spermidine/putrescine transport system	4
+M00194	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Maltose/maltodextrin transport system	4
+M00196	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Raffinose/stachyose/melibiose transport system	4
+M00197	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative fructooligosaccharide transport system	4
+M00198	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative sn-glycerol-phosphate transport system	4
+M00199	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	L-Arabinose/lactose transport system	3
+M00200	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative sorbitol/mannitol transport system	4
+M00201	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	alpha-Glucoside transport system	3
+M00202	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Oligogalacturonide transport system	3
+M00203	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Glucose/arabinose transport system	3
+M00204	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Trehalose/maltose transport system	4
+M00205	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	N-Acetylglucosamine transport system	3
+M00206	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Cellobiose transport system	4
+M00207	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative multiple sugar transport system	4
+M00208	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Glycine betaine/proline transport system	3
+M00209	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Osmoprotectant transport system	3
+M00210	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Phospholipid transport system	5
+M00211	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative ABC transport system	2
+M00212	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Ribose transport system	3
+M00213	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	L-Arabinose transport system	3
+M00214	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Methyl-galactoside transport system	3
+M00215	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	D-Xylose transport system	3
+M00216	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Multiple sugar transport system	3
+M00217	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	D-Allose transport system	3
+M00218	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Fructose transport system	3
+M00219	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	AI-2 transport system	4
+M00220	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Rhamnose transport system	4
+M00221	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative simple sugar transport system	3
+M00222	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Phosphate transport system	4
+M00223	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Phosphonate transport system	3
+M00224	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Fluoroquinolone transport system	3
+M00225	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Lysine/arginine/ornithine transport system	4
+M00226	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Histidine transport system	4
+M00227	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Glutamine transport system	3
+M00228	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Aspartate/glutamate/glutamine transport system	3
+M00229	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Arginine transport system	4
+M00230	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Glutamate/aspartate transport system	4
+M00231	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Octopine/nopaline transport system	4
+M00232	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	General L-amino acid transport system	4
+M00233	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Glutamate transport system	4
+M00234	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	L-Cystine transport system	3
+M00235	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Arginine/ornithine transport system	4
+M00236	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Putative polar amino acid transport system	3
+M00237	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Branched-chain amino acid transport system	5
+M00238	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	D-Methionine transport system	3
+M00239	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	Peptides/nickel transport system	5
+M00240	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Iron complex transport system	3
+M00241	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Vitamin B12 transport system	3
+M00242	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Zinc transport system	3
+M00243	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Manganese/iron transport system	3
+M00244	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Putative zinc/manganese transport system	3
+M00245	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Cobalt/nickel transport system	4
+M00246	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Nickel transport system	4
+M00247	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Putative ABC transport system	3
+M00249	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Capsular polysaccharide transport system	3
+M00250	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Lipopolysaccharide transport system	2
+M00251	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Teichoic acid transport system	2
+M00252	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Lipooligosaccharide transport system	2
+M00253	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Sodium transport system	2
+M00254	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	ABC-2 type transport system	2
+M00255	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Lipoprotein-releasing system	2
+M00256	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Cell division transport system	2
+M00257	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Hemin transport system	2
+M00258	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Putative ABC transport system	2
+M00259	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Heme transport system	3
+M00260	Genetic information processing	DNA polymerase	Prokaryote	Complex	"DNA polymerase III complex, bacteria"	6
+M00264	Genetic information processing	DNA polymerase	Prokaryote	Complex	"DNA polymerase II complex, archaea"	2
+M00265	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, glucose-specific II component"	3
+M00266	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, maltose/glucose-specific II component"	3
+M00267	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, N-acetylglucosamine-specific II component"	3
+M00268	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, alpha-glucoside-specific II component"	3
+M00269	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, sucrose-specific II component"	3
+M00270	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, trehalose-specific II component"	3
+M00271	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, beta-glucoside-specific II component"	3
+M00272	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, beta-glucoside (arbutin/salicin/cellobiose)-specific II component"	3
+M00273	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, fructose-specific II component"	3
+M00274	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, mannitol-specific II component"	3
+M00275	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, cellobiose-specific II component"	3
+M00276	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, mannose-specific II component"	4
+M00277	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, N-acetylgalactosamine-specific II component"	4
+M00278	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, sorbose-specific II component"	4
+M00279	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, galactitol-specific II component"	3
+M00280	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, glucitol/sorbitol-specific II component"	3
+M00281	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, lactose-specific II component"	3
+M00282	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, D-glucosamine-specific II component"	3
+M00283	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, ascorbate-specific II component"	3
+M00287	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, galactosamine-specific II component"	4
+M00298	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Multidrug/hemolysin transport system	2
+M00299	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Spermidine/putrescine transport system	4
+M00300	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Putrescine transport system	4
+M00301	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Mannopine transport system	4
+M00302	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	2-Aminoethylphosphonate transport system	4
+M00303	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, N-acetylmuramic acid-specific II component"	3
+M00304	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, fructose-specific II component"	4
+M00305	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, 2-O-A-mannosyl-D-glycerate-specific II component"	3
+M00306	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, fructose-specific II-like component"	3
+M00308	Carbohydrate metabolism	Central carbohydrate metabolism	Prokaryote	Pathway	"Semi-phosphorylative Entner-Doudoroff pathway, gluconate => glycerate-3P"	4..5
+M00309	Carbohydrate metabolism	Central carbohydrate metabolism	Prokaryote	Pathway	"Non-phosphorylative Entner-Doudoroff pathway, gluconate/galactonate => glycerate"	3
+M00314	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Bacitracin transport system	2
+M00315	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Uncharacterized ABC transport system	2
+M00316	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Manganese transport system	3
+M00317	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Manganese/iron transport system	4
+M00318	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Iron/zinc/manganese/copper transport system	3
+M00319	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Manganese/zinc/iron transport system	4
+M00320	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Lipopolysaccharide export system	3
+M00321	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Bicarbonate transport system	4
+M00322	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Neutral amino acid transport system	5
+M00323	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Urea transport system	5
+M00324	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	Dipeptide transport system	5
+M00325	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	alpha-Hemolysin/cyclolysin transport system	3
+M00326	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	RTX toxin transport system	4
+M00327	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	S-Layer protein transport system	3
+M00328	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Hemophore/metalloprotease transport system	3
+M00329	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Multiple protein transport system	2
+M00330	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Adhesin protein transport system	3
+M00331	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Type II general secretion pathway	12
+M00332	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Type III secretion system	9
+M00333	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Type IV secretion system	6
+M00334	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Type VI secretion system	13
+M00335	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Sec (secretion) system	8..9
+M00336	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Twin-arginine translocation (Tat) system	2
+M00339	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	RaxAB-RaxC type I secretion system	3
+M00342	Genetic information processing	Proteasome	Prokaryote	Complex	Bacterial proteasome	4
+M00343	Genetic information processing	Proteasome	Prokaryote	Complex	Archaeal proteasome	3
+M00344	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Formaldehyde assimilation, xylulose monophosphate pathway"	4
+M00345	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Formaldehyde assimilation, ribulose monophosphate pathway"	3..4
+M00346	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Formaldehyde assimilation, serine pathway"	9
+M00348	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	Glutathione transport system	4
+M00349	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	Microcin C transport system	4
+M00356	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Methanogenesis, methanol => methane"	3
+M00357	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Methanogenesis, acetate => methane"	5..6
+M00358	Energy metabolism	Methane metabolism	Prokaryote	Pathway	Coenzyme M biosynthesis	4
+M00363	Gene set	Pathogenicity	Prokaryote	Signature	"EHEC pathogenicity signature, Shiga toxin"	2
+M00364	Biosynthesis of terpenoids and polyketides	Terpenoid backbone biosynthesis	Prokaryote	Pathway	"C10-C20 isoprenoid biosynthesis, bacteria"	2
+M00365	Biosynthesis of terpenoids and polyketides	Terpenoid backbone biosynthesis	Prokaryote	Pathway	"C10-C20 isoprenoid biosynthesis, archaea"	2
+M00373	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	Ethylmalonyl pathway	12
+M00374	Energy metabolism	Carbon fixation	Prokaryote	Pathway	Dicarboxylate-hydroxybutyrate cycle	13
+M00375	Energy metabolism	Carbon fixation	Prokaryote	Pathway	Hydroxypropionate-hydroxybutylate cycle	14
+M00376	Energy metabolism	Carbon fixation	Prokaryote	Pathway	3-Hydroxypropionate bi-cycle	13
+M00377	Energy metabolism	Carbon fixation	Prokaryote	Pathway	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	7
+M00378	Energy metabolism	Methane metabolism	Prokaryote	Pathway	F420 biosynthesis	4
+M00390	Genetic information processing	RNA processing	Prokaryote	Complex	"Exosome, archaea"	3
+M00394	Genetic information processing	RNA processing	Prokaryote	Complex	RNA degradosome	4
+M00416	Energy metabolism	ATP synthesis	Prokaryote	Complex	Cytochrome aa3-600 menaquinol oxidase	4
+M00417	Energy metabolism	ATP synthesis	Prokaryote	Complex	Cytochrome o ubiquinol oxidase	4
+M00418	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Toluene degradation, anaerobic, toluene => benzoyl-CoA"	6
+M00419	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Cymene degradation, p-cymene => p-cumate"	3
+M00422	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Acetyl-CoA pathway, CO2 => acetyl-CoA"	2
+M00423	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Molybdate/tungstate transport system	3
+M00429	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	Competence-related DNA transformation transporter	8
+M00434	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PhoR-PhoB (phosphate starvation response) two-component regulatory system	2
+M00435	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Taurine transport system	3
+M00436	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Sulfonate transport system	3
+M00437	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Phthalate transport system	3
+M00438	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Nitrate/nitrite transport system	3
+M00439	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	Oligopeptide transport system	5
+M00440	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	Nickel transport system	5
+M00442	Environmental information processing	Mineral and organic ion transport system	Prokaryote	Complex	Putative hydroxymethylpyrimidine transport system	3
+M00443	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	SenX3-RegX3 (phosphate starvation response) two-component regulatory system	2
+M00444	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PhoQ-PhoP (magnesium transport) two-component regulatory system	2
+M00445	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	EnvZ-OmpR (osmotic stress response) two-component regulatory system	2
+M00446	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	RstB-RstA two-component regulatory system	2
+M00447	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CpxA-CpxR (envelope stress response) two-component regulatory system	2
+M00448	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CssS-CssR (secretion stress response) two-component regulatory system	2
+M00449	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CreC-CreB (phosphate regulation) two-component regulatory system	2
+M00450	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	BaeS-BaeR (envelope stress response) two-component regulatory system	2
+M00451	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	BasS-BasR (antimicrobial peptide resistance) two-component regulatory system	2
+M00452	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CusS-CusR (copper tolerance) two-component regulatory system	2
+M00453	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	QseC-QseB (quorum sensing) two-component regulatory system	2
+M00454	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	KdpD-KdpE (potassium transport) two-component regulatory system	2
+M00455	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	TorS-TorR (TMAO respiration) two-component regulatory system	2
+M00456	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ArcB-ArcA (anoxic redox control) two-component regulatory system	2
+M00457	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	TctE-TctD (tricarboxylic acid transport) two-component regulatory system	2
+M00458	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ResE-ResD (aerobic and anaerobic respiration) two-component regulatory system	2
+M00459	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	VicK-VicR (cell wall metabolism) two-component regulatory system	2
+M00460	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	MprB-MprA (maintenance of persistent infection) two-component regulatory system	2
+M00461	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	MtrB-MtrA (osmotic stress response) two-component regulatory system	2
+M00462	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PrrB-PrrA (intracellular multiplication) two-component regulatory system	2
+M00463	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	TrcS-TrcR two-component regulatory system	2
+M00464	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NrsS-NrsR (nickel tolerance) two-component regulatory system	2
+M00465	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ManS-ManR (manganese homeostasis) two-component regulatory system	2
+M00466	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NblS-NblR (photosynthesis) two-component regulatory system	2
+M00467	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	SasA-RpaAB (circadian timing mediating) two-component regulatory system	3
+M00468	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	SaeS-SaeR (staphylococcal virulence regulation) two-component regulatory system	2
+M00469	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	BceS-BceR (bacitracin transport) two-component regulatory system	2
+M00470	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	YxdK-YxdJ (antimicrobial peptide response) two-component regulatory system	2
+M00471	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NarX-NarL (nitrate respiration) two-component regulatory system	2
+M00472	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NarQ-NarP (nitrate respiration) two-component regulatory system	2
+M00473	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	UhpB-UhpA (hexose phosphates uptake) two-component regulatory system	2
+M00474	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	RcsC-RcsD-RcsB (capsule synthesis) two-component regulatory system	3
+M00475	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	BarA-UvrY (central carbon metabolism) two-component regulatory system	2
+M00476	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ComP-ComA (competence) two-component regulatory system	2
+M00477	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	EvgS-EvgA (acid and drug tolerance) two-component regulatory system	2
+M00478	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	DegS-DegU (multicellular behavior control) two-component regulatory system	2
+M00479	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	DesK-DesR (membrane lipid fluidity regulation) two-component regulatory system	2
+M00480	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	VraS-VraR (cell-wall peptidoglycan synthesis) two-component regulatory system	2
+M00481	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	LiaS-LiaR (cell wall stress response) two-component regulatory system	2
+M00482	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	DevS-DevR (redox response) two-component regulatory system	2
+M00483	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NreB-NreC (dissimilatory nitrate/nitrite reduction) two-component regulatory system	2
+M00484	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	YdfH-YdfI two-component regulatory system	2
+M00485	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	KinABCDE-Spo0FA (sporulation control) two-component regulatory system	7
+M00486	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CitA-CitB (citrate fermentation) two-component regulatory system	2
+M00487	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CitS-CitT (magnesium-citrate transport) two-component regulatory system	2
+M00488	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	DcuS-DcuR (C4-dicarboxylate metabolism) two-component regulatory system	2
+M00489	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	DctS-DctR (C4-dicarboxylate transport) two-component regulatory system	2
+M00490	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	MalK-MalR (malate transport) two-component regulatory system	2
+M00491	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	arabinogalactan oligomer/maltooligosaccharide transport system	4
+M00492	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	LytS-LytR two-component regulatory system	2
+M00493	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	AlgZ-AlgR (alginate production) two-component regulatory system	2
+M00494	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NatK-NatR (sodium extrusion) two-component regulatory system	2
+M00495	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	AgrC-AgrA (exoprotein synthesis) two-component regulatory system	2
+M00496	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ComD-ComE (competence) two-component regulatory system	2
+M00497	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	GlnL-GlnG (nitrogen regulation) two-component regulatory system	2
+M00498	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NtrY-NtrX (nitrogen regulation) two-component regulatory system	2
+M00499	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	HydH-HydG (metal tolerance) two-component regulatory system	2
+M00500	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	AtoS-AtoC (cPHB biosynthesis) two-component regulatory system	2
+M00501	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PilS-PilR (type 4 fimbriae synthesis) two-component regulatory system	2
+M00502	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	GlrK-GlrR (amino sugar metabolism) two-component regulatory system	2
+M00503	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PgtB-PgtA (phosphoglycerate transport) two-component regulatory system	2
+M00504	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	DctB-DctD (C4-dicarboxylate transport) two-component regulatory system	2
+M00505	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	KinB-AlgB (alginate production) two-component regulatory system	2
+M00506	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CheA-CheYBV (chemotaxis) two-component regulatory system	5
+M00507	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ChpA-ChpB/PilGH (chemosensory) two-component regulatory system	5
+M00508	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PixL-PixGH (positive phototaxis) two-component regulatory system	3
+M00509	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	WspE-WspRF (chemosensory) two-component regulatory system	3
+M00510	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	Cph1-Rcp1 (light response) two-component regulatory system	2
+M00511	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PleC-PleD (cell fate control) two-component regulatory system	4
+M00512	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CckA-CtrA/CpdR (cell cycle control) two-component regulatory system	3
+M00513	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	LuxQN/CqsS-LuxU-LuxO (quorum sensing) two-component regulatory system	4
+M00514	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	TtrS-TtrR (tetrathionate respiration) two-component regulatory system	2
+M00515	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	FlrB-FlrC (polar flagellar synthesis) two-component regulatory system	2
+M00516	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	SLN1-YPD1-SSK1/SKN7 (osmosensing) two-component regulatory system	1..3
+M00517	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	RpfC-RpfG (cell-to-cell signaling) two-component regulatory system	2
+M00518	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	GlnK-GlnL (glutamine utilization) two-component regulatory system	2
+M00519	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	YesM-YesN two-component regulatory system	2
+M00520	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ChvG-ChvI (acidity sensing) two-component regulatory system	2
+M00521	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	CiaH-CiaR two-component regulatory system	2
+M00522	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	SalK-SalR two-component regulatory system	2
+M00523	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	RegB-RegA (redox response) two-component regulatory system	2
+M00524	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	FixL-FixJ (nitrogen fixation) two-component regulatory system	2
+M00525	Amino acid metabolism	Lysine metabolism	Prokaryote	Pathway	"Lysine biosynthesis, acetyl-DAP pathway, aspartate => lysine"	9
+M00526	Amino acid metabolism	Lysine metabolism	Prokaryote	Pathway	"Lysine biosynthesis, DAP dehydrogenase pathway, aspartate => lysine"	6
+M00528	Energy metabolism	Nitrogen metabolism	Prokaryote	Pathway	"Nitrification, ammonia => nitrite"	2
+M00529	Energy metabolism	Nitrogen metabolism	Prokaryote	Pathway	"Denitrification, nitrate => nitrogen"	4
+M00530	Energy metabolism	Nitrogen metabolism	Prokaryote	Pathway	"Dissimilatory nitrate reduction, nitrate => ammonia"	2
+M00533	Amino acid metabolism	Aromatic amino acid metabolism	Prokaryote	Pathway	"Homoprotocatechuate degradation, homoprotocatechuate => 2-oxohept-3-enedioate"	4
+M00534	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Naphthalene degradation, naphthalene => salicylate"	6
+M00535	Amino acid metabolism	Branched-chain amino acid metabolism	Prokaryote	Pathway	"Isoleucine biosynthesis, pyruvate => 2-oxobutanoate"	3
+M00537	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Xylene degradation, xylene => methylbenzoate"	3
+M00538	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Toluene degradation, toluene => benzoate"	3
+M00539	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Cumate degradation, p-cumate => 2-oxopent-4-enoate + 2-methylpropanoate"	5
+M00540	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Benzoate degradation, cyclohexanecarboxylic acid =>pimeloyl-CoA"	5
+M00541	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Benzoyl-CoA degradation, benzoyl-CoA => 3-hydroxypimeloyl-CoA"	4
+M00542	Gene set	Pathogenicity	Prokaryote	Signature	"EHEC/EPEC pathogenicity signature, T3SS and effectors"	8
+M00543	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Biphenyl degradation, biphenyl => 2-oxopent-4-enoate + benzoate"	4
+M00544	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Carbazole degradation, carbazole => 2-oxopent-4-enoate + anthranilate"	3
+M00545	Amino acid metabolism	Aromatic amino acid metabolism	Prokaryote	Pathway	"Trans-cinnamate degradation, trans-cinnamate => acetyl-CoA"	6..7
+M00547	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Benzene/toluene degradation, benzene => catechol / toluene => 3-methylcatechol"	2
+M00548	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Benzene degradation, benzene => catechol"	1
+M00550	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	"Ascorbate degradation, ascorbate => D-xylulose-5P"	5
+M00551	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Benzoate degradation, benzoate => catechol / methylbenzoate => methylcatechol"	2
+M00552	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	"D-galactonate degradation, De Ley-Doudoroff pathway, D-galactonate => glycerate-3P"	5
+M00563	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Methanogenesis, methylamine/dimethylamine/trimethylamine => methane"	4
+M00564	Gene set	Pathogenicity	Prokaryote	Signature	"Helicobacter pylori pathogenicity signature, cagA pathogenicity island"	23
+M00565	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	"Trehalose biosynthesis, D-glucose 1P => trehalose"	6
+M00566	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	"Dipeptide transport system, Firmicutes"	4
+M00567	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"Methanogenesis, CO2 => methane"	8
+M00568	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Catechol ortho-cleavage, catechol => 3-oxoadipate"	4
+M00569	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Catechol meta-cleavage, catechol => acetyl-CoA / 4-methylcatechol => propanoyl-CoA"	5..7
+M00571	Environmental information processing	Bacterial secretion system	Prokaryote	Complex	AlgE-type Mannuronan C-5-Epimerase transport system	3
+M00572	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Pimeloyl-ACP biosynthesis, BioC-BioH pathway, malonyl-ACP => pimeloyl-ACP"	6
+M00573	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Biotin biosynthesis, BioI pathway, long-chain-acyl-ACP => pimeloyl-ACP => biotin"	5
+M00574	Gene set	Pathogenicity	Prokaryote	Signature	"Pertussis pathogenicity signature, pertussis toxin"	4
+M00575	Gene set	Pathogenicity	Prokaryote	Signature	"Pertussis pathogenicity signature, T1SS"	5
+M00576	Gene set	Pathogenicity	Prokaryote	Signature	"ETEC pathogenicity signature, heat-labile and heat-stable enterotoxins"	2
+M00577	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Biotin biosynthesis, BioW pathway, pimelate => pimeloyl-CoA => biotin"	5
+M00579	Energy metabolism	Carbon fixation	Prokaryote	Pathway	"Phosphate acetyltransferase-acetate kinase pathway, acetyl-CoA => acetate"	2
+M00580	Carbohydrate metabolism	Central carbohydrate metabolism	Prokaryote	Pathway	"Pentose phosphate pathway, archaea, fructose 6P => ribose 5P"	2..3
+M00581	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Biotin transport system	3
+M00582	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Energy-coupling factor transport system	4
+M00583	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Putative peptide transport system	2
+M00584	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Acetoin utilization transport system	4
+M00585	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	L-Cystine transport system	5
+M00586	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Putative S-methylcysteine transport system	3
+M00587	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Arginine/lysine/histidine/glutamine transport system	2
+M00589	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Putative lysine transport system	3
+M00590	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Erythritol transport system	3
+M00591	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative xylitol transport system	3
+M00592	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Inositol transport system	3
+M00593	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Inositol transport system	3
+M00595	Energy metabolism	Sulfur metabolism	Prokaryote	Pathway	"Thiosulfate oxidation by SOX complex, thiosulfate => sulfate"	1
+M00596	Energy metabolism	Sulfur metabolism	Prokaryote	Pathway	"Dissimilatory sulfate reduction, sulfate => H2S"	3
+M00597	Energy metabolism	Photosynthesis	Prokaryote	Complex	Anoxygenic photosystem II	2
+M00598	Energy metabolism	Photosynthesis	Prokaryote	Complex	Anoxygenic photosystem I	4
+M00599	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Inositol-phosphate transport system	4
+M00600	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	"alpha-1,4-Digalacturonate transport system"	3
+M00601	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative chitobiose transport system	3
+M00602	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Arabinosaccharide transport system	4
+M00603	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Putative aldouronate transport system	3
+M00604	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Trehalose transport system	3
+M00605	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Glucose/mannose transport system	4
+M00606	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	"N,N'-Diacetylchitobiose transport system"	4
+M00607	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Glycerol transport system	5
+M00608	Energy metabolism	Methane metabolism	Prokaryote	Pathway	"2-Oxocarboxylic acid chain extension, 2-oxoglutarate => 2-oxoadipate => 2-oxopimelate => 2-oxosuberate"	3
+M00609	Amino acid metabolism	Cysteine and methionine metabolism	Prokaryote	Pathway	"Cysteine biosynthesis, methionine => cysteine"	6
+M00610	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, D-glucosaminate-specific II component"	4
+M00613	Module set	Metabolic capacity	Prokaryote	Signature	Anoxygenic photosynthesis in green nonsulfur bacteria	14
+M00614	Module set	Metabolic capacity	Prokaryote	Signature	Anoxygenic photosynthesis in green sulfur bacteria	11..13
+M00617	Module set	Metabolic capacity	Prokaryote	Signature	Methanogen	3..8
+M00618	Module set	Metabolic capacity	Prokaryote	Signature	Acetogen	9
+M00619	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Xylobiose transport system	3
+M00620	Energy metabolism	Carbon fixation	Prokaryote	Pathway	"Incomplete reductive citrate cycle, acetyl-CoA => oxoglutarate"	7
+M00622	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Nicotinate degradation, nicotinate => fumarate"	6
+M00623	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Phthalate degradation, phthalate => protocatechuate"	3
+M00624	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Terephthalate degradation, terephthalate => 3,4-dihydroxybenzoate"	2
+M00625	Gene set	Drug resistance	Prokaryote	Signature	Methicillin resistance	3
+M00627	Gene set	Drug resistance	Prokaryote	Signature	"beta-Lactam resistance, Bla system"	3
+M00628	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"beta-Lactam resistance, AmpC system"	4
+M00631	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	"D-Galacturonate degradation (bacteria), D-galacturonate => pyruvate + D-glyceraldehyde 3P"	5
+M00633	Carbohydrate metabolism	Central carbohydrate metabolism	Prokaryote	Pathway	"Semi-phosphorylative Entner-Doudoroff pathway, gluconate/galactonate => glycerate-3P"	4
+M00634	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Oleandomycin transport system	2
+M00635	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Tetracycline resistance, TetAB(46) transporter"	2
+M00636	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Phthalate degradation, phthalate => protocatechuate"	3
+M00637	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Anthranilate degradation, anthranilate => catechol"	1
+M00638	Xenobiotics biodegradation	Aromatics degradation	Prokaryote	Pathway	"Salicylate degradation, salicylate => gentisate"	1
+M00639	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MexCD-OprJ"	2
+M00641	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MexEF-OprN"	2
+M00642	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MexJK-OprM"	2
+M00643	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MexXY-OprM"	2
+M00644	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Vanadium resistance, efflux pump MexGHI-OpmD"	3
+M00645	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump SmeABC"	3
+M00646	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump AcrAD-TolC"	3
+M00647	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump AcrAB-TolC/SmeDEF"	2
+M00648	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump MdtABC"	3
+M00649	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump AdeABC"	3
+M00651	Gene set	Drug resistance	Prokaryote	Signature	"Vancomycin resistance, D-Ala-D-Lac type"	4..7
+M00652	Gene set	Drug resistance	Prokaryote	Signature	"Vancomycin resistance, D-Ala-D-Ser type"	5
+M00653	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	AauS-AauR (acidic amino acids utilization) two-component regulatory system	2
+M00654	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ParS-ParR (polymyxin-adaptive resistance) two-component regulatory system	2
+M00655	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	AdeS-AdeR two-component regulatory system	2
+M00656	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	VanS-VanR (VanB type vancomycin resistance) two-component regulatory system	2
+M00657	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	VanS-VanR (VanE type vancomycin resistance) two-component regulatory system	2
+M00658	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	VanS-VanR (actinomycete type vancomycin resistance) two-component regulatory system	2
+M00660	Gene set	Plant pathogenicity	Prokaryote	Signature	"Xanthomonas spp. pathogenicity signature, T3SS and effectors"	8
+M00662	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	Hk1-Rrp1 (glycerol uptake and utilization) two-component regulatory system	2
+M00663	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	SsrA-SsrB two-component regulatory system	2
+M00664	Gene set	Symbiosis	Prokaryote	Signature	Nodulation	4
+M00667	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Tetracycline resistance, efflux pump"	2
+M00668	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Tetracycline resistance, TetA transporter"	2
+M00669	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	gamma-Hexachlorocyclohexane transport system	4
+M00670	Environmental information processing	"Saccharide, polyol, and lipid transport system"	Prokaryote	Complex	Mce transport system	4
+M00673	Biosynthesis of other secondary metabolites	beta-Lactam biosynthesis	Prokaryote	Pathway	"Cephamycin C biosynthesis, aminoadipate + cycteine + valine => cephamycin C"	8
+M00674	Biosynthesis of other secondary metabolites	beta-Lactam biosynthesis	Prokaryote	Pathway	"Clavaminate biosynthesis, arginine + glyceraldehyde-3P => clavaminate"	4
+M00675	Biosynthesis of other secondary metabolites	beta-Lactam biosynthesis	Prokaryote	Pathway	"Carbapenem-3-carboxylate biosynthesis, pyrroline-5-carboxylate + malonyl-CoA => carbapenem-3-carboxylate"	3
+M00696	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump AcrEF-TolC"	2
+M00697	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MdtEF-TolC"	2
+M00698	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump BpeEF-OprC"	2
+M00699	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump AmeABC"	2
+M00700	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump AbcA"	2
+M00701	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump EmrAB"	2
+M00702	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump NorB"	2
+M00704	Gene set	Drug resistance	Prokaryote	Signature	"Tetracycline resistance, efflux pump Tet38"	2
+M00705	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MepA"	2
+M00706	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, EfrAB transporter"	2
+M00707	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, MdlAB/SmdAB transporter"	2
+M00708	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, PatAB transporter"	2
+M00709	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Macrolide resistance, MacAB-TolC transporter"	3
+M00710	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, efflux pump EbrAB"	2
+M00711	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, efflux pump MdtIJ"	2
+M00712	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, efflux pump YkkCD"	2
+M00713	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Fluoroquinolone resistance, efflux pump LfrA"	2
+M00714	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump QacA"	2
+M00715	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Lincosamide resistance, efflux pump LmrB"	2
+M00716	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	ArlS-ArlR (virulence regulation) two-component regulatory system	2
+M00717	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump NorA"	2..3
+M00718	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MexAB-OprM"	2
+M00719	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	Ihk-Irr (virulence regulation) two-component regulatory system	2
+M00720	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, efflux pump VexEF-TolC"	3
+M00721	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Cationic antimicrobial peptide (CAMP) resistance, arnBCADTEF operon"	3
+M00722	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Cationic antimicrobial peptide (CAMP) resistance, ethanolaminephosphotransferase EptA"	3
+M00723	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Cationic antimicrobial peptide (CAMP) resistance, ethanolaminephosphotransferase EptB"	4
+M00724	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Cationic antimicrobial peptide (CAMP) resistance, palmitoyl transferase PagP"	3
+M00725	Gene set	Drug resistance	Prokaryote	Signature	"Cationic antimicrobial peptide (CAMP) resistance, dltABCD operon"	3
+M00726	Gene set	Drug resistance	Prokaryote	Signature	"Cationic antimicrobial peptide (CAMP) resistance, lysyl-phosphatidylglycerol (L-PG) synthase MprF"	3
+M00727	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Cationic antimicrobial peptide (CAMP) resistance, N-acetylmuramoyl-L-alanine amidase AmiA and AmiC"	3
+M00728	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Cationic antimicrobial peptide (CAMP) resistance, envelope protein folding and degrading factors DegP and DsbA"	3
+M00729	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Fluoroquinolone resistance, gyrase-protecting protein Qnr"	3
+M00730	Gene set	Drug resistance	Prokaryote	Signature	"Cationic antimicrobial peptide (CAMP) resistance, VraFG transporter"	3
+M00731	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Bacitracin transport system	2
+M00732	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Cationic antimicrobial peptide transport system	2
+M00733	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	GraS-GraR (cationic antimicrobial peptide transport) two-component regulatory system	2
+M00734	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	BraS-BraR (bacitracin transport) two-component regulatory system	2
+M00736	Biosynthesis of other secondary metabolites	beta-Lactam biosynthesis	Prokaryote	Pathway	"Nocardicin A biosynthesis, L-pHPG + arginine + serine => nocardicin A"	4
+M00737	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Bacitracin resistance, VraDE transporter"	4
+M00738	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Bacitracin resistance, BceAB transporter"	3
+M00739	Environmental information processing	Peptide and nickel transport system	Prokaryote	Complex	Cationic peptide transport system	5
+M00740	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	Methylaspartate cycle	11
+M00742	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Aminoglycoside resistance, protease FtsH"	3
+M00743	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Aminoglycoside resistance, protease HtpX"	3
+M00744	Gene set	Drug resistance	Prokaryote	Signature	"Cationic antimicrobial peptide (CAMP) resistance, protease PgtE"	3
+M00745	Gene set	Drug resistance	Prokaryote	Signature	"Imipenem resistance, repression of porin OprD"	2
+M00746	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, repression of porin OmpF"	3
+M00747	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Bacitracin transport system	2
+M00754	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Nisin resistance, phage shock protein homolog LiaH"	3
+M00760	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Erythromycin resistance, macrolide 2'-phosphotransferase I MphA"	2
+M00761	Carbohydrate metabolism	Other carbohydrate metabolism	Prokaryote	Pathway	"Undecaprenylphosphate alpha-L-Ara4N biosynthesis, UDP-GlcA => undecaprenyl phosphate alpha-L-Ara4N"	4
+M00762	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Copper-processing system	2
+M00763	Amino acid metabolism	Arginine and proline metabolism	Prokaryote	Pathway	"Ornithine biosynthesis, mediated by LysW, glutamate => ornithine"	6
+M00764	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, fructoselysine/glucoselysine-specific II component"	4
+M00765	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump Bmr"	2
+M00766	Environmental information processing	Drug resistance	Prokaryote	FuncSet	"Streptomycin resistance, deactivating enzyme StrAB"	2
+M00767	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump OqxAB"	3
+M00768	Environmental information processing	Drug efflux transporter/pump	Prokaryote	FuncSet	"Multidrug resistance, efflux pump GesABC"	2
+M00769	Gene set	Drug resistance	Prokaryote	Signature	"Multidrug resistance, efflux pump MexPQ-OpmE"	3
+M00770	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PfeS-PfeR (enterobactin-dependent iron acquisition) two-component regulatory system	2
+M00771	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	FitF-FitH (insecticidal toxin regulation) two-component regulatory system	2
+M00772	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	HupT-HupR (hydrogenase synthesis regulation) two-component regulatory system	2
+M00773	Biosynthesis of terpenoids and polyketides	Macrolide biosynthesis	Prokaryote	Pathway	"Tylosin biosynthesis, methylmalonyl-CoA + malonyl-CoA => tylactone => tylosin"	8
+M00774	Biosynthesis of terpenoids and polyketides	Macrolide biosynthesis	Prokaryote	Pathway	"Erythromycin biosynthesis, propanoyl-CoA + methylmalonyl-CoA => deoxyerythronolide B => erythromycin A/B"	6
+M00775	Biosynthesis of terpenoids and polyketides	Macrolide biosynthesis	Prokaryote	Pathway	"Oleandomycin biosynthesis, malonyl-CoA + methylmalonyl-CoA => 8,8a-deoxyoleandolide => oleandomycin"	5
+M00776	Biosynthesis of terpenoids and polyketides	Macrolide biosynthesis	Prokaryote	Pathway	"Pikromycin/methymycin biosynthesis, methylmalonyl-CoA + malonyl-CoA => narbonolide/10-deoxymethynolide => pikromycin/methymycin"	4
+M00777	Biosynthesis of terpenoids and polyketides	Macrolide biosynthesis	Prokaryote	Pathway	"Avermectin biosynthesis, 2-methylbutanoyl-CoA/isobutyryl-CoA => 6,8a-Seco-6,8a-deoxy-5-oxoavermectin 1a/1b aglycone => avermectin A1a/B1a/A1b/B1b"	5
+M00778	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Type II polyketide backbone biosynthesis, acyl-CoA + malonyl-CoA => polyketide"	2..3
+M00779	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Dihydrokalafungin biosynthesis, octaketide => dihydrokalafungin"	4
+M00780	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Tetracycline/oxytetracycline biosynthesis, pretetramide => tetracycline/oxytetracycline"	7
+M00781	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Nogalavinone/aklavinone biosynthesis, deoxynogalonate/deoxyaklanonate => nogalavinone/aklavinone"	4
+M00782	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Mithramycin biosynthesis, 4-demethylpremithramycinone => mithramycin"	8
+M00783	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Tetracenomycin C/8-demethyltetracenomycin C biosynthesis, tetracenomycin F2 => tetracenomycin C/8-demethyltetracenomycin C"	5
+M00784	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Elloramycin biosynthesis, 8-demethyltetracenomycin C => elloramycin A"	5
+M00785	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Cycloserine biosynthesis, arginine/serine => cycloserine"	6
+M00786	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Fumitremorgin alkaloid biosynthesis, tryptophan + proline => fumitremorgin C/A"	9
+M00787	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Bacilysin biosynthesis, prephenate => bacilysin"	6
+M00788	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Terpentecin biosynthesis, GGAP => terpentecin"	2
+M00789	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Rebeccamycin biosynthesis, tryptophan => rebeccamycin"	6
+M00790	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Pyrrolnitrin biosynthesis, tryptophan => pyrrolnitrin"	4
+M00791	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Manganese/zinc transport system	3
+M00792	Environmental information processing	"Metallic cation, iron-siderophore and vitamin B12 transport system"	Prokaryote	Complex	Manganese/zinc transport system	3
+M00793	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-L-rhamnose biosynthesis	4
+M00794	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-6-deoxy-D-allose biosynthesis	2
+M00795	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-beta-L-noviose biosynthesis	3
+M00796	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-D-mycaminose biosynthesis	3
+M00797	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-D-desosamine biosynthesis	4
+M00798	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-L-mycarose biosynthesis	5
+M00799	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-L-oleandrose biosynthesis	5
+M00800	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-L-megosamine biosynthesis	5
+M00801	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-L-olivose biosynthesis	4
+M00802	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-D-forosamine biosynthesis	5
+M00803	Biosynthesis of terpenoids and polyketides	Polyketide sugar unit biosynthesis	Prokaryote	Pathway	dTDP-D-angolosamine biosynthesis	4
+M00804	Energy metabolism	Nitrogen metabolism	Prokaryote	Pathway	"Complete nitrification, comammox, ammonia => nitrite => nitrate"	3
+M00805	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Staurosporine biosynthesis, tryptophan => staurosporine"	7
+M00806	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, maltose-specific II component"	3
+M00807	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, galactose-specific II component"	3
+M00808	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Violacein biosynthesis, tryptophan => violacein"	4
+M00809	Environmental information processing	Phosphotransferase system (PTS)	Prokaryote	Complex	"PTS system, glucose-specific II component"	3
+M00810	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Nicotine degradation, pyridine pathway, nicotine => 2,6-dihydroxypyridine/succinate semialdehyde"	4
+M00811	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Nicotine degradation, pyrrolidine pathway, nicotine => succinate semialdehyde"	1..5
+M00812	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	AgrC2-AgrA2 (virulence regulation) two-component regulatory system	2
+M00813	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Lantibiotic transport system	3
+M00814	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Acarbose biosynthesis, sedoheptulopyranose-7P => acarbose"	8
+M00815	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Validamycin A biosynthesis, sedoheptulopyranose-7P => validamycin A"	9
+M00816	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	NisK-NisR (lantibiotic biosynthesis) two-component regulatory system	2
+M00817	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Lantibiotic transport system	3
+M00818	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	FusK-FusR (virulence regulation) two-component regulatory system	2
+M00819	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Pentalenolactone biosynthesis, farnesyl-PP => pentalenolactone"	7
+M00820	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	SagS-HptB-HsbR (swarming activity and biofilm formation) two-component regulatory system	1..3
+M00821	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, efflux pump TriABC-TolC"	4
+M00822	Environmental information processing	Drug efflux transporter/pump	Prokaryote	Complex	"Multidrug resistance, efflux pump MexMN-OprM"	3
+M00823	Biosynthesis of terpenoids and polyketides	Type II polyketide biosynthesis	Prokaryote	Pathway	"Chlortetracycline biosynthesis, pretetramide => chlortetracycline"	8
+M00824	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"9-membered enediyne core biosynthesis, malonyl-CoA => 3-hydroxyhexadeca-4,6,8,10,12,14-hexaenoyl-ACP => 9-membered enediyne core"	2
+M00825	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"10-membered enediyne core biosynthesis, malonyl-CoA => 3-hydroxyhexadeca-4,6,8,10,12,14-hexaenoyl-ACP => 10-membered enediyne core"	2
+M00826	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"C-1027 benzoxazolinate moiety biosynthesis, chorismate => benzoxazolinyl-CoA"	6
+M00827	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"C-1027 beta-amino acid moiety biosynthesis, tyrosine => 3-chloro-4,5-dihydroxy-beta-phenylalanyl-PCP"	6
+M00828	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"Maduropeptin beta-hydroxy acid moiety biosynthesis, tyrosine => 3-(4-hydroxyphenyl)-3-oxopropanoyl-PCP"	4
+M00829	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"3,6-Dimethylsalicylyl-CoA biosynthesis, malonyl-CoA => 6-methylsalicylate => 3,6-dimethylsalicylyl-CoA"	3
+M00830	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"Neocarzinostatin naphthoate moiety biosynthesis, malonyl-CoA => 2-hydroxy-5-methyl-1-naphthoate => 2-hydroxy-7-methoxy-5-methyl-1-naphthoyl-CoA"	4
+M00831	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"Kedarcidin 2-hydroxynaphthoate moiety biosynthesis, malonyl-CoA => 3,6,8-trihydroxy-2-naphthoate => 3-hydroxy-7,8-dimethoxy-6-isopropoxy-2-naphthoyl-CoA"	5
+M00832	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"Kedarcidin 2-aza-3-chloro-beta-tyrosine moiety biosynthesis, azatyrosine => 2-aza-3-chloro-beta-tyrosyl-PCP"	5
+M00833	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"Calicheamicin biosynthesis, calicheamicinone => calicheamicin"	10
+M00834	Biosynthesis of terpenoids and polyketides	Enediyne biosynthesis	Prokaryote	Pathway	"Calicheamicin orsellinate moiety biosynthesis, malonyl-CoA => orsellinate-ACP => 5-iodo-2,3-dimethoxyorsellinate-ACP"	5
+M00835	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Pyocyanine biosynthesis, chorismate => pyocyanine"	7
+M00836	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Coenzyme F430 biosynthesis, sirohydrochlorin => coenzyme F430"	4
+M00837	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Prodigiosin biosynthesis, L-proline => prodigiosin"	10
+M00838	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Undecylprodigiosin biosynthesis, L-proline => undecylprodigiosin"	10
+M00839	Environmental information processing	Two-component regulatory system	Prokaryote	FuncSet	PdtaS-PdtaR two-component regulatory system	2
+M00843	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"L-threo-Tetrahydrobiopterin biosynthesis, GTP => L-threo-BH4"	3
+M00845	Amino acid metabolism	Arginine and proline metabolism	Prokaryote	Pathway	"Arginine biosynthesis, glutamate => acetylcitrulline => arginine"	7
+M00846	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Siroheme biosynthesis, glutamate => siroheme"	7
+M00847	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Prokaryote	Pathway	"Heme biosynthesis, archaea, siroheme => heme"	3
+M00848	Biosynthesis of other secondary metabolites	Biosynthesis of other secondary metabolites	Prokaryote	Pathway	"Aurachin biosynthesis, anthranilate => aurachin A"	8
+M00849	Biosynthesis of terpenoids and polyketides	Terpenoid backbone biosynthesis	Prokaryote	Pathway	"C5 isoprenoid biosynthesis, mevalonate pathway, archaea"	7..8
+M00850	Gene set	Pathogenicity	Prokaryote	Signature	"Vibrio cholerae pathogenicity signature, cholera toxins"	6
+M00851	Gene set	Drug resistance	Prokaryote	Signature	Carbapenem resistance	1
+M00852	Gene set	Pathogenicity	Prokaryote	Signature	"Vibrio cholerae pathogenicity signature, toxin coregulated pilus"	14
+M00853	Gene set	Pathogenicity	Prokaryote	Signature	"ETEC pathogenicity signature, colonization factors"	4
+M00856	Gene set	Pathogenicity	Prokaryote	Signature	"Salmonella enterica pathogenicity signature, typhoid toxin"	4
+M00857	Gene set	Pathogenicity	Prokaryote	Signature	"Salmonella enterica pathogenicity signature, Vi antigen"	7
+M00858	Environmental information processing	ABC-2 type and other transport systems	Prokaryote	Complex	Vi polysaccharide transport system	3
+M00859	Gene set	Pathogenicity	Prokaryote	Signature	"Bacillus anthracis pathogenicity signature, anthrax toxin"	3
+M00860	Gene set	Pathogenicity	Prokaryote	Signature	"Bacillus anthracis pathogenicity signature, polyglutamic acid capsule biosynthesis"	7
+M00863	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Putative lysine/arginine/ornithine/histidine/octopine transport system	4
+M00864	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Arginine/lysine/histidine transport system	3
+M00865	Environmental information processing	Phosphate and amino acid transport system	Prokaryote	Complex	Hydroxyproline transporter system	4
+M00866	Glycan metabolism	Lipopolysaccharide metabolism	Prokaryote	Pathway	"KDO2-lipid A biosynthesis, Raetz pathway, non-LpxL-LpxM type"	9
+M00867	Glycan metabolism	Lipopolysaccharide metabolism	Prokaryote	Pathway	KDO2-lipid A modification pathway	5
+M90000	Genetic information processing	Ribosome	Prokaryote	Complex	"Ribosome, prokaryote"	79
+M00840	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"Tetrahydrofolate biosynthesis, mediated by ribA and trpF, GTP => THF"	6
+M00001	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate"	9..10
+M00002	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Glycolysis, core module involving three-carbon compounds"	5..6
+M00003	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Gluconeogenesis, oxaloacetate => fructose-6P"	7..8
+M00004	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	Pentose phosphate pathway (Pentose phosphate cycle)	7..8
+M00005	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"PRPP biosynthesis, ribose 5P => PRPP"	1
+M00006	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Pentose phosphate pathway, oxidative phase, glucose 6P => ribulose 5P"	2..3
+M00007	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Pentose phosphate pathway, non-oxidative phase, fructose 6P => ribose 5P"	4
+M00009	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Citrate cycle (TCA cycle, Krebs cycle)"	8
+M00010	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Citrate cycle, first carbon oxidation, oxaloacetate => 2-oxoglutarate"	3
+M00011	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Citrate cycle, second carbon oxidation, 2-oxoglutarate => oxaloacetate"	5
+M00012	Carbohydrate metabolism	Other carbohydrate metabolism	Common	Pathway	Glyoxylate cycle	5
+M00015	Amino acid metabolism	Arginine and proline metabolism	Common	Pathway	"Proline biosynthesis, glutamate => proline"	2..3
+M00018	Amino acid metabolism	Serine and threonine metabolism	Common	Pathway	"Threonine biosynthesis, aspartate => homoserine => threonine"	5
+M00019	Amino acid metabolism	Branched-chain amino acid metabolism	Common	Pathway	"Valine/isoleucine biosynthesis, pyruvate => valine / 2-oxobutanoate => isoleucine"	4
+M00020	Amino acid metabolism	Serine and threonine metabolism	Common	Pathway	"Serine biosynthesis, glycerate-3P => serine"	3
+M00021	Amino acid metabolism	Cysteine and methionine metabolism	Common	Pathway	"Cysteine biosynthesis, serine => cysteine"	2
+M00022	Amino acid metabolism	Aromatic amino acid metabolism	Common	Pathway	"Shikimate pathway, phosphoenolpyruvate + erythrose-4P => chorismate"	4..7
+M00023	Amino acid metabolism	Aromatic amino acid metabolism	Common	Pathway	"Tryptophan biosynthesis, chorismate => tryptophan"	3..5
+M00024	Amino acid metabolism	Aromatic amino acid metabolism	Common	Pathway	"Phenylalanine biosynthesis, chorismate => phenylalanine"	2..3
+M00026	Amino acid metabolism	Histidine metabolism	Common	Pathway	"Histidine biosynthesis, PRPP => histidine"	7..9
+M00027	Amino acid metabolism	Other amino acid metabolism	Common	Pathway	GABA (gamma-Aminobutyrate) shunt	3
+M00028	Amino acid metabolism	Arginine and proline metabolism	Common	Pathway	"Ornithine biosynthesis, glutamate => ornithine"	4..5
+M00034	Amino acid metabolism	Cysteine and methionine metabolism	Common	Pathway	Methionine salvage pathway	8..11
+M00035	Amino acid metabolism	Cysteine and methionine metabolism	Common	Pathway	Methionine degradation	4
+M00036	Amino acid metabolism	Branched-chain amino acid metabolism	Common	Pathway	"Leucine degradation, leucine => acetoacetate + acetyl-CoA"	6
+M00038	Amino acid metabolism	Aromatic amino acid metabolism	Common	Pathway	"Tryptophan metabolism, tryptophan => kynurenine => 2-aminomuconate"	7
+M00040	Amino acid metabolism	Aromatic amino acid metabolism	Common	Pathway	"Tyrosine biosynthesis, prephanate => pretyrosine => tyrosine"	2
+M00045	Amino acid metabolism	Histidine metabolism	Common	Pathway	"Histidine degradation, histidine => N-formiminoglutamate => glutamate"	4..5
+M00046	Nucleotide metabolism	Pyrimidine metabolism	Common	Pathway	"Pyrimidine degradation, uracil => beta-alanine, thymine => 3-aminoisobutanoate"	3
+M00048	Nucleotide metabolism	Purine metabolism	Common	Pathway	"Inosine monophosphate biosynthesis, PRPP + glutamine => IMP"	8..11
+M00049	Nucleotide metabolism	Purine metabolism	Common	Pathway	"Adenine ribonucleotide biosynthesis, IMP => ADP,ATP"	4
+M00050	Nucleotide metabolism	Purine metabolism	Common	Pathway	"Guanine ribonucleotide biosynthesis IMP => GDP,GTP"	4
+M00051	Nucleotide metabolism	Pyrimidine metabolism	Common	Pathway	"Uridine monophosphate biosynthesis, glutamine (+ PRPP) => UMP"	3..6
+M00052	Nucleotide metabolism	Pyrimidine metabolism	Common	Pathway	"Pyrimidine ribonucleotide biosynthesis, UMP => UDP/UTP,CDP/CTP"	3
+M00082	Lipid metabolism	Fatty acid biosynthesis and degradation	Common	Pathway	"Fatty acid biosynthesis, initiation"	2..3
+M00083	Lipid metabolism	Fatty acid biosynthesis and degradation	Common	Pathway	"Fatty acid biosynthesis, elongation"	1..4
+M00086	Lipid metabolism	Fatty acid biosynthesis and degradation	Common	Pathway	"beta-Oxidation, acyl-CoA synthesis"	1
+M00087	Lipid metabolism	Fatty acid biosynthesis and degradation	Common	Pathway	beta-Oxidation	3..4
+M00091	Lipid metabolism	Lipid metabolism	Common	Pathway	"Phosphatidylcholine (PC) biosynthesis, PE => PC"	1..2
+M00093	Lipid metabolism	Lipid metabolism	Common	Pathway	"Phosphatidylethanolamine (PE) biosynthesis, PA => PS => PE"	3
+M00095	Biosynthesis of terpenoids and polyketides	Terpenoid backbone biosynthesis	Common	Pathway	"C5 isoprenoid biosynthesis, mevalonate pathway"	7
+M00096	Biosynthesis of terpenoids and polyketides	Terpenoid backbone biosynthesis	Common	Pathway	"C5 isoprenoid biosynthesis, non-mevalonate pathway"	8
+M00098	Lipid metabolism	Lipid metabolism	Common	Pathway	Acylglycerol degradation	2
+M00112	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	Tocopherol/tocotorienol biosynthesis	4
+M00115	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"NAD biosynthesis, aspartate => NAD"	5
+M00118	Amino acid metabolism	Other amino acid metabolism	Common	Pathway	"Glutathione biosynthesis, glutamate => glutathione"	2
+M00120	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"Coenzyme A biosynthesis, pantothenate => CoA"	3..5
+M00121	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"Heme biosynthesis, plants and bacteria, glutamate => heme"	10
+M00123	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"Biotin biosynthesis, pimeloyl-ACP/CoA => biotin"	3..4
+M00125	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"Riboflavin biosynthesis, GTP => riboflavin/FMN/FAD"	1..5
+M00126	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"Tetrahydrofolate biosynthesis, GTP => THF"	5..7
+M00133	Amino acid metabolism	Polyamine biosynthesis	Common	Pathway	"Polyamine biosynthesis, arginine => agmatine => putrescine => spermidine"	4
+M00134	Amino acid metabolism	Polyamine biosynthesis	Common	Pathway	"Polyamine biosynthesis, arginine => ornithine => putrescine"	2
+M00135	Amino acid metabolism	Polyamine biosynthesis	Common	Pathway	"GABA biosynthesis, eukaryotes, putrescine => GABA"	3
+M00145	Energy metabolism	ATP synthesis	Common	Complex	"NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria"	11
+M00151	Energy metabolism	ATP synthesis	Common	Complex	Cytochrome bc1 complex respiratory unit	2..3
+M00161	Energy metabolism	Photosynthesis	Common	Complex	Photosystem II	6
+M00163	Energy metabolism	Photosynthesis	Common	Complex	Photosystem I	6
+M00165	Energy metabolism	Carbon fixation	Common	Pathway	Reductive pentose phosphate cycle (Calvin cycle)	11
+M00166	Energy metabolism	Carbon fixation	Common	Pathway	"Reductive pentose phosphate cycle, ribulose-5P => glyceraldehyde-3P"	4
+M00167	Energy metabolism	Carbon fixation	Common	Pathway	"Reductive pentose phosphate cycle, glyceraldehyde-3P => ribulose-5P"	7
+M00168	Energy metabolism	Carbon fixation	Common	Pathway	"CAM (Crassulacean acid metabolism), dark"	2
+M00169	Energy metabolism	Carbon fixation	Common	Pathway	"CAM (Crassulacean acid metabolism), light"	2
+M00176	Energy metabolism	Sulfur metabolism	Common	Pathway	"Assimilatory sulfate reduction, sulfate => H2S"	3
+M00185	Environmental information processing	Mineral and organic ion transport system	Common	Complex	Sulfate/thiosulfate transport system	4
+M00307	Carbohydrate metabolism	Central carbohydrate metabolism	Common	Pathway	"Pyruvate oxidation, pyruvate => acetyl-CoA"	1
+M00338	Amino acid metabolism	Cysteine and methionine metabolism	Common	Pathway	"Cysteine biosynthesis, homocysteine + serine => cysteine"	2
+M00359	Metabolism	Aminoacyl tRNA	Common	FuncSet	"Aminoacyl-tRNA biosynthesis, eukaryotes"	20
+M00360	Metabolism	Aminoacyl tRNA	Common	FuncSet	"Aminoacyl-tRNA biosynthesis, prokaryotes"	18
+M00361	Metabolism	Nucleotide sugar	Common	FuncSet	"Nucleotide sugar biosynthesis, eukaryotes"	6
+M00362	Metabolism	Nucleotide sugar	Common	FuncSet	"Nucleotide sugar biosynthesis, prokaryotes"	7
+M00432	Amino acid metabolism	Branched-chain amino acid metabolism	Common	Pathway	"Leucine biosynthesis, 2-oxoisovalerate => 2-oxoisocaproate"	3
+M00433	Amino acid metabolism	Lysine metabolism	Common	Pathway	"Lysine biosynthesis, 2-oxoglutarate => 2-oxoadipate"	3..4
+M00527	Amino acid metabolism	Lysine metabolism	Common	Pathway	"Lysine biosynthesis, DAP aminotransferase pathway, aspartate => lysine"	7
+M00531	Energy metabolism	Nitrogen metabolism	Common	Pathway	"Assimilatory nitrate reduction, nitrate => ammonia"	2
+M00546	Nucleotide metabolism	Purine metabolism	Common	Pathway	"Purine degradation, xanthine => urea"	5..6
+M00549	Carbohydrate metabolism	Other carbohydrate metabolism	Common	Pathway	"Nucleotide sugar biosynthesis, glucose => UDP-glucose"	3
+M00554	Carbohydrate metabolism	Other carbohydrate metabolism	Common	Pathway	"Nucleotide sugar biosynthesis, galactose => UDP-galactose"	2
+M00555	Amino acid metabolism	Serine and threonine metabolism	Common	Pathway	"Betaine biosynthesis, choline => betaine"	1..2
+M00570	Amino acid metabolism	Branched-chain amino acid metabolism	Common	Pathway	"Isoleucine biosynthesis, threonine => 2-oxobutanoate => isoleucine"	5
+M00611	Module set	Metabolic capacity	Common	Signature	Oxygenic photosynthesis in plants and cyanobacteria	12
+M00612	Module set	Metabolic capacity	Common	Signature	Anoxygenic photosynthesis in purple bacteria	12
+M00615	Module set	Metabolic capacity	Common	Signature	Nitrate assimilation	3
+M00616	Module set	Metabolic capacity	Common	Signature	Sulfate-sulfur assimilation	4
+M00632	Carbohydrate metabolism	Other carbohydrate metabolism	Common	Pathway	"Galactose degradation, Leloir pathway, galactose => alpha-D-glucose-1P"	4
+M00741	Carbohydrate metabolism	Other carbohydrate metabolism	Common	Pathway	"Propanoyl-CoA metabolism, propanoyl-CoA => succinyl-CoA"	3
+M00844	Amino acid metabolism	Arginine and proline metabolism	Common	Pathway	"Arginine biosynthesis, ornithine => arginine"	3
+M00854	Carbohydrate metabolism	Other carbohydrate metabolism	Common	Pathway	"Glycogen biosynthesis, glucose-1P => glycogen/starch"	2..3
+M00855	Carbohydrate metabolism	Other carbohydrate metabolism	Common	Pathway	"Glycogen degradation, glycogen => glucose-6P"	3..4
+M00868	Metabolism of cofactors and vitamins	Cofactor and vitamin metabolism	Common	Pathway	"Heme biosynthesis, animals and fungi, glycine => heme"	8
+M91000	Genetic information processing	Ribosome	Common	Complex	"Ribosome, all"	130

@@ -1,0 +1,305 @@
+---
+title: "GRENE_figure4"
+author: "Kazuo Isobe and Yaping Liu"
+date: "2025-08-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      dev = "png")
+```
+
+```{r library,results='hide'}
+#library R packages.
+library(vegan)
+library(ggplot2)
+library(ggpmisc)
+library(here)
+library(tidyverse)
+library(dplyr)#rename
+library(ggsignif)
+library(cowplot)
+library(rfPermute)
+library(tidyr)
+library(gdm)
+library(geosphere)
+library(plspm) # SEM
+library(rstatix)
+library(reshape)#melt
+library(kableExtra)#output of table
+library(linkET)#mantel
+library(phyloseq)
+library(ggpubr) #stat_compare_means
+```
+
+```{r path}
+#Use the "here" function to use relative path.
+here::here("dataanalysis")
+```
+
+```{r get data,base data, microbial data and GDM output data}
+# get base data
+data_path <- here("dataanalysis/00data/rawdata","ASV-sample.csv")
+data_base <- read.csv(data_path)
+
+data_path_38 <- here("dataanalysis/00data","sem_for_alpha2_38.txt")
+data_base_38 <- read.csv(data_path_38, header = TRUE, sep = "\t", row.names = 1)
+
+data_path_190 <- here("dataanalysis/00data","sem_beta190.txt")
+data_base_190 <- read.csv(data_path_190, header = TRUE, sep = "\t", row.names = 1)
+
+# get microbial data
+## bacteria
+otu_tab_bac_path <- here("dataanalysis/00data/rawdata","Bac-count.csv")
+otu_tab_bac <- read.csv(otu_tab_bac_path,fileEncoding = "UTF-8-BOM")
+
+tax_tab_bac_path <- here("dataanalysis/00data/rawdata","Bac-taxonomy.csv")
+tax_tab_bac <- read.csv(tax_tab_bac_path,fileEncoding = "UTF-8-BOM")
+
+## fungi
+otu_tab_fung_path <- here("dataanalysis/00data/rawdata","fungi-count.csv")
+otu_tab_fung <- read.csv(otu_tab_fung_path,fileEncoding = "UTF-8-BOM")
+
+tax_tab_fung_path <- here("dataanalysis/00data/rawdata","fungi-taxonomy.csv")
+tax_tab_fung <- read.csv(tax_tab_fung_path,fileEncoding = "UTF-8-BOM")
+
+# get gdm output
+gdm_bac_path <- here("dataanalysis/00data","GRENE_bac_GDM_ispline.txt")
+gdm_bac <- read.csv(gdm_bac_path, header = TRUE, sep = "\t", row.names = 1)
+
+gdm_fung_path <- here("dataanalysis/00data","GRENE_fung_GDM_ispline.txt")
+gdm_fung <- read.csv(gdm_fung_path, header = TRUE, sep = "\t", row.names = 1)
+
+# get function data
+KO_N_path <-  here("dataanalysis/00data","KO_nitrogen_summary_38.txt")
+KO_N <- read.csv(KO_N_path, header = TRUE, sep = "\t", row.names = 1)
+
+KO_path <- here("dataanalysis/00data","MAPLE_KO_summary_for_R_38.txt")
+KO <- read.csv(KO_path, header = TRUE, sep = "\t")
+KO_table <- KO %>%
+  group_by(KO) %>%  
+  summarise(across(everything(), sum))
+KO_table <- data.frame(KO_table)
+rownames(KO_table) <- KO_table$KO
+KO_table <- KO_table[,-1]
+
+```
+
+```{r import data into phyloseq}
+# Import into phyloseq
+## Bacteria
+row.names(otu_tab_bac) <- otu_tab_bac$OTU
+otu_tab_bac <- otu_tab_bac %>% select(-OTU)
+row.names(tax_tab_bac) <- tax_tab_bac$OTU
+tax_tab_bac <- tax_tab_bac %>% select (-OTU) 
+row.names(data_base) <- data_base$sample
+samples <- data_base %>% select (-sample)
+otu_tab_bac <- as.matrix(otu_tab_bac)  # Transform into matrixes otu and tax tables
+tax_tab_bac <- as.matrix(tax_tab_bac)
+otu_tab_bac = otu_table(otu_tab_bac, taxa_are_rows = TRUE) # Transform into phyloseq readable format
+tax_tab_bac = tax_table(tax_tab_bac)
+samples = sample_data(data_base)
+physeq_bac <- phyloseq(otu_tab_bac, tax_tab_bac, samples)
+
+## Fungi
+row.names(otu_tab_fung) <- otu_tab_fung$OTU
+otu_tab_fung <- otu_tab_fung %>% select(-OTU)
+row.names(tax_tab_fung) <- tax_tab_fung$OTU
+tax_tab_fung <- tax_tab_fung %>% select (-OTU) 
+row.names(data_base) <- data_base$sample
+samples <- data_base %>% select (-sample)
+otu_tab_fung <- as.matrix(otu_tab_fung)    # Transform into matrixes otu and tax tables
+tax_tab_fung <- as.matrix(tax_tab_fung)
+otu_tab_fung = otu_table(otu_tab_fung, taxa_are_rows = TRUE) # Transform into phyloseq readable format
+tax_tab_fung = tax_table(tax_tab_fung)
+samples = sample_data(data_base)
+physeq_fungi <- phyloseq(otu_tab_fung, tax_tab_fung, samples)
+
+## N cycling
+physeq_N <- phyloseq(
+  otu_table(KO_N, taxa_are_rows = TRUE),
+  sample_data(data_base_38)
+)
+
+## KO
+## N cycling
+physeq_KO <- phyloseq(
+  otu_table(KO_table, taxa_are_rows = TRUE),
+  sample_data(data_base_38)
+)
+
+```
+
+
+```{r output path}
+Figure_path <- "C:/Users/alip/Dropbox/Yaping/GRENE/paper/Revise_submit_20250728/Revise_submit_20250728/RScriptsandFigures/"
+```
+
+>**Figure4: Context-dependent effects of microbial community components on N allocation**
+
+```{r}
+data_base_190 <- read.csv(data_path_190, header = TRUE, sep = "\t", row.names = 1)
+
+data_base_190[is.na(data_base_190)]<-0
+data_base_190$GMIN_GNIT_GMIN <- data_base_190$GMIN_GNIT_GMIN*-1
+
+data_base_190[,c(2:16,18:41,44)]<- scale(data_base_190[,c(2:16,18:41,44)])
+
+data_base_190 <- na.omit(data_base_190)
+
+
+#subset
+#prepare data for all vegetations and soil types.
+#data for SEM_Cambisol
+data_sem_Andosol <- subset(data_base_190,WRB_3!='Cambisols'&WRB_3!='others')
+#data for SEM_Andosol
+data_sem_Cambisol <- subset(data_base_190,WRB_3!='Andosols'&WRB_3!='others')
+#data for SEM_Broadleaf
+data_sem_Broadleaf <- subset(data_base_190,Dominant_tree_type!='Conifer')
+#data for SEM_Conifer
+data_sem_Conifer <- subset(data_base_190,Dominant_tree_type!='Broadleaf')
+
+# Figure 4A for broadleaved forest
+colnames(data_base_190)
+dat_blocks <- list(
+  soiltype='soil_type',
+  climate=c('MAT','MAP'),
+  pH="pH.H2O.",
+  SOM=c("Total.C",'Total.N'),
+  NMDS1_bac='NMDS1_bac',
+  NMDS1_fungi='NMDS1_fungi',
+  Bacterialabundance= 'Bacterial.16S',
+  Openness=c('GNIT_GMIN','GMIN_GNIT_GMIN'),
+  NCR=c("GMIN","GNIT","GNH4C","GNO3C"))
+
+dat_blocks
+#The association between latent variables is described through a 0-1 matrix, where 0 indicates no association between the variables and 1 indicates an association.
+soiltype <- c(0, 0, 0, 0, 0,0,0, 0, 0)
+climate<- c(0, 0, 0, 0, 0,0,0, 0, 0)
+pH<-c(1, 1, 0, 0,0,0, 0, 0, 0)
+SOM<- c(1,0, 0, 0,0,0, 0, 0, 0)
+NMDS1_bac<- c(0, 0,1,1,0,0, 0, 0, 0)
+NMDS1_fungi<- c(0, 0,1, 1,0,0, 0,0,0)
+Bacterialabundance<- c(0, 0,1, 1, 0,0,0,0, 0)
+Openness<- c(0, 0, 0, 0,1,1,1, 0,0)
+NCR<-c(0, 0, 0, 0,1,1,1,0,0)
+
+dat_path <- rbind(soiltype,climate,pH,SOM,NMDS1_bac,NMDS1_fungi,Bacterialabundance,Openness,NCR)
+
+colnames(dat_path) <- rownames(dat_path)
+dat_path
+innerplot(dat_path)
+dat_modes <- c("B","A","A","A","A", "A","A","A","A")
+dat_modes
+dat_pls <- plspm(data_sem_Broadleaf, dat_path, dat_blocks, modes = dat_modes,boot.val = TRUE,br=1000)
+summary(dat_pls)
+
+# Figure 4B for Coniferous forest
+colnames(data_base_190)
+dat_blocks <- list(
+  soiltype='soil_type',
+  climate=c('MAT','MAP'),
+  pH="pH.H2O.",
+  SOM=c("Total.C",'Total.N'),
+  NMDS1_bac='NMDS1_bac',
+  NMDS1_fungi='NMDS1_fungi',
+  Bacterialabundance= 'Bacterial.16S',
+  Openness=c('GNIT_GMIN','GMIN_GNIT_GMIN'),
+  NCR=c("GMIN","GNIT","GNH4C","GNO3C"))
+
+dat_blocks
+#The association between latent variables is described through a 0-1 matrix, where 0 indicates no association between the variables and 1 indicates an association.
+soiltype <- c(0, 0, 0, 0, 0,0,0, 0, 0)
+climate<- c(0, 0, 0, 0, 0,0,0, 0, 0)
+pH<-c(1, 1, 0, 0,0,0, 0, 0, 0)
+SOM<- c(1,1, 0, 0,0,0, 0, 0, 0)
+NMDS1_bac<- c(0, 0,1,1,0,0, 0, 0, 0)
+NMDS1_fungi<- c(0, 0,1, 1,0,0, 0,0,0)
+Bacterialabundance<- c(0, 0,1, 1, 0,0,0,0, 0)
+Openness<- c(0, 0, 0, 0,1,1,1, 0,0)
+NCR<-c(0, 0, 0, 0,1,1,1,0,0)
+
+dat_path <- rbind(soiltype,climate,pH,SOM,NMDS1_bac,NMDS1_fungi,Bacterialabundance,Openness,NCR)
+
+colnames(dat_path) <- rownames(dat_path)
+dat_path
+innerplot(dat_path)
+dat_modes <- c("B","A","A","A","A", "A","A","A","A")
+dat_modes
+
+dat_pls <- plspm(data_sem_Conifer, dat_path, dat_blocks, modes = dat_modes,boot.val = TRUE,br=1000)
+summary(dat_pls)
+
+# Figure 4c for Andosal forest
+colnames(data_base_190)
+dat_blocks <- list(
+  treetype="Dominant_tree_type_1",
+  climate=c('MAT','MAP'),
+  pH="pH.H2O.",
+  SOM=c("Total.C",'Total.N'),
+  NMDS1_bac='NMDS1_bac',
+  NMDS1_fungi='NMDS1_fungi',
+  Bacterialabundance= 'Bacterial.16S',
+  Openness=c('GNIT_GMIN','GMIN_GNIT_GMIN'),
+  NCR=c("GMIN","GNIT","GNH4C","GNO3C"))
+
+dat_blocks
+#The association between latent variables is described through a 0-1 matrix, where 0 indicates no association between the variables and 1 indicates an association.
+treetype <- c(0, 0, 0, 0, 0,0,0, 0, 0)
+climate<- c(0, 0, 0, 0, 0,0,0, 0, 0)
+pH<-c(1, 1, 0, 0,0,0, 0, 0, 0)
+SOM<- c(1,1, 0, 0,0,0, 0, 0, 0)
+NMDS1_bac<- c(0, 0,1,1,0,0, 0, 0, 0)
+NMDS1_fungi<- c(0, 0,1, 1,0,0, 0,0,0)
+Bacterialabundance<- c(0, 0,1, 1, 0,0,0,0, 0)
+Openness<- c(0, 0, 0, 0,1,1,1, 0,0)
+NCR<-c(0, 0, 0, 0,1,1,1,0,0)
+
+dat_path <- rbind(treetype,climate,pH,SOM,NMDS1_bac,NMDS1_fungi,Bacterialabundance,Openness,NCR)
+
+colnames(dat_path) <- rownames(dat_path)
+dat_path
+innerplot(dat_path)
+dat_modes <- c("B","A","A","A","A", "A","A","A","A")
+dat_modes
+dat_pls <- plspm(data_sem_Andosol, dat_path, dat_blocks, modes = dat_modes,boot.val = TRUE,br=1000)
+dat_pls
+summary(dat_pls)
+
+# Figure 4D for Cambisoal forest
+colnames(data_base_190)
+dat_blocks <- list(
+  treetype="Dominant_tree_type_1",
+  climate=c('MAT','MAP'),
+  pH="pH.H2O.",
+  SOM=c("Total.C",'Total.N'),
+  NMDS1_bac='NMDS1_bac',
+  NMDS1_fungi='NMDS1_fungi',
+  Bacterialabundance= 'Bacterial.16S',
+  Openness=c('GNIT_GMIN','GMIN_GNIT_GMIN'),
+  NCR=c("GMIN","GNIT","GNH4C","GNO3C"))
+
+dat_blocks
+#The association between latent variables is described through a 0-1 matrix, where 0 indicates no association between the variables and 1 indicates an association.
+treetype <- c(0, 0, 0, 0, 0,0,0, 0, 0)
+climate<- c(0, 0, 0, 0, 0,0,0, 0, 0)
+pH<-c(1, 1, 0, 0,0,0, 0, 0, 0)
+SOM<- c(1,1, 0, 0,0,0, 0, 0, 0)
+NMDS1_bac<- c(0, 0,1,1,0,0, 0, 0, 0)
+NMDS1_fungi<- c(0, 0,1, 1,0,0, 0,0,0)
+Bacterialabundance<- c(0, 0,1, 1, 0,0,0,0, 0)
+Openness<- c(0, 0, 0, 0,1,1,1, 0,0)
+NCR<-c(0, 0, 0, 0,1,1,1,0,0)
+
+dat_path <- rbind(treetype,climate,pH,SOM,NMDS1_bac,NMDS1_fungi,Bacterialabundance,Openness,NCR)
+
+colnames(dat_path) <- rownames(dat_path)
+dat_path
+innerplot(dat_path)
+dat_modes <- c("B","A","A","A","A", "A","A","A","A")
+dat_modes
+dat_pls <- plspm(data_sem_Cambisol, dat_path, dat_blocks, modes = dat_modes,boot.val = TRUE,br=1000)
+dat_pls
+summary(dat_pls)
+```

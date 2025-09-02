@@ -1,0 +1,275 @@
+---
+title: "GRENE_figure5"
+author: "Kazuo Isobe and Yaping Liu"
+date: "2025-08-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      dev = "png")
+```
+
+```{r library,results='hide'}
+#library R packages.
+library(vegan)
+library(ggplot2)
+library(ggpmisc)
+library(here)
+library(tidyverse)
+library(dplyr)#rename
+library(ggsignif)
+library(cowplot)
+library(rfPermute)
+library(tidyr)
+library(gdm)
+library(geosphere)
+library(plspm) # SEM
+library(rstatix)
+library(reshape)#melt
+library(kableExtra)#output of table
+library(linkET)#mantel
+library(phyloseq)
+library(ggpubr) #stat_compare_means
+```
+
+```{r path}
+#Use the "here" function to use relative path.
+here::here("dataanalysis")
+```
+
+```{r get data,base data, microbial data and GDM output data}
+# get base data
+data_path <- here("dataanalysis/00data/rawdata","ASV-sample.csv")
+data_base <- read.csv(data_path)
+
+data_path_38 <- here("dataanalysis/00data","sem_for_alpha2_38.txt")
+data_base_38 <- read.csv(data_path_38, header = TRUE, sep = "\t", row.names = 1)
+
+data_path_190 <- here("dataanalysis/00data","sem_beta190.txt")
+data_base_190 <- read.csv(data_path_190, header = TRUE, sep = "\t", row.names = 1)
+
+# get microbial data
+## bacteria
+otu_tab_bac_path <- here("dataanalysis/00data/rawdata","Bac-count.csv")
+otu_tab_bac <- read.csv(otu_tab_bac_path,fileEncoding = "UTF-8-BOM")
+
+tax_tab_bac_path <- here("dataanalysis/00data/rawdata","Bac-taxonomy.csv")
+tax_tab_bac <- read.csv(tax_tab_bac_path,fileEncoding = "UTF-8-BOM")
+
+## fungi
+otu_tab_fung_path <- here("dataanalysis/00data/rawdata","fungi-count.csv")
+otu_tab_fung <- read.csv(otu_tab_fung_path,fileEncoding = "UTF-8-BOM")
+
+tax_tab_fung_path <- here("dataanalysis/00data/rawdata","fungi-taxonomy.csv")
+tax_tab_fung <- read.csv(tax_tab_fung_path,fileEncoding = "UTF-8-BOM")
+
+# get gdm output
+gdm_bac_path <- here("dataanalysis/00data","GRENE_bac_GDM_ispline.txt")
+gdm_bac <- read.csv(gdm_bac_path, header = TRUE, sep = "\t", row.names = 1)
+
+gdm_fung_path <- here("dataanalysis/00data","GRENE_fung_GDM_ispline.txt")
+gdm_fung <- read.csv(gdm_fung_path, header = TRUE, sep = "\t", row.names = 1)
+
+# get function data
+KO_N_path <-  here("dataanalysis/00data","KO_nitrogen_summary_38.txt")
+KO_N <- read.csv(KO_N_path, header = TRUE, sep = "\t", row.names = 1)
+
+KO_path <- here("dataanalysis/00data","MAPLE_KO_summary_for_R_38.txt")
+KO <- read.csv(KO_path, header = TRUE, sep = "\t")
+KO_table <- KO %>%
+  group_by(KO) %>%  
+  summarise(across(everything(), sum))
+KO_table <- data.frame(KO_table)
+rownames(KO_table) <- KO_table$KO
+KO_table <- KO_table[,-1]
+
+```
+
+```{r import data into phyloseq}
+# Import into phyloseq
+## Bacteria
+row.names(otu_tab_bac) <- otu_tab_bac$OTU
+otu_tab_bac <- otu_tab_bac %>% select(-OTU)
+row.names(tax_tab_bac) <- tax_tab_bac$OTU
+tax_tab_bac <- tax_tab_bac %>% select (-OTU) 
+row.names(data_base) <- data_base$sample
+samples <- data_base %>% select (-sample)
+otu_tab_bac <- as.matrix(otu_tab_bac)  # Transform into matrixes otu and tax tables
+tax_tab_bac <- as.matrix(tax_tab_bac)
+otu_tab_bac = otu_table(otu_tab_bac, taxa_are_rows = TRUE) # Transform into phyloseq readable format
+tax_tab_bac = tax_table(tax_tab_bac)
+samples = sample_data(data_base)
+physeq_bac <- phyloseq(otu_tab_bac, tax_tab_bac, samples)
+
+## Fungi
+row.names(otu_tab_fung) <- otu_tab_fung$OTU
+otu_tab_fung <- otu_tab_fung %>% select(-OTU)
+row.names(tax_tab_fung) <- tax_tab_fung$OTU
+tax_tab_fung <- tax_tab_fung %>% select (-OTU) 
+row.names(data_base) <- data_base$sample
+samples <- data_base %>% select (-sample)
+otu_tab_fung <- as.matrix(otu_tab_fung)    # Transform into matrixes otu and tax tables
+tax_tab_fung <- as.matrix(tax_tab_fung)
+otu_tab_fung = otu_table(otu_tab_fung, taxa_are_rows = TRUE) # Transform into phyloseq readable format
+tax_tab_fung = tax_table(tax_tab_fung)
+samples = sample_data(data_base)
+physeq_fungi <- phyloseq(otu_tab_fung, tax_tab_fung, samples)
+
+## N cycling
+physeq_N <- phyloseq(
+  otu_table(KO_N, taxa_are_rows = TRUE),
+  sample_data(data_base_38)
+)
+
+## KO
+## N cycling
+physeq_KO <- phyloseq(
+  otu_table(KO_table, taxa_are_rows = TRUE),
+  sample_data(data_base_38)
+)
+
+```
+
+
+```{r output path}
+Figure_path <- "C:/Users/alip/Dropbox/Yaping/GRENE/paper/Revise_submit_20250728/Revise_submit_20250728/RScriptsandFigures/"
+```
+
+
+>**Figure5: Changes in the metabolic capabilities of the microbial community in response to changes in the soil pH. **
+
+```{r}
+
+# get base data
+data_base <- read.csv(data_path)
+
+# get module data
+data_module_path <- "C:/Users/alip/Dropbox/Yaping/GRENE/dataanalysis/00data/module_table.txt"
+data_module <- read.csv(data_module_path, header = TRUE, sep = "\t")
+
+# get module ID list
+data_module_ID_path <- "C:/Users/alip/Dropbox/Yaping/GRENE/dataanalysis/00data/KEGG_module_ID.txt"
+data_module_ID <- read.csv(data_module_ID_path, header = TRUE, sep = "\t")
+
+# Reshape data_module to long format
+data_module_long <- pivot_longer(data_module, 
+                                 cols = -Module, 
+                                 names_to = "sample", 
+                                 values_to = "module_abundance")
+head(data_module_long)
+
+# Merge with environment data 
+data_module_merged <- merge(data_module_long, data_base, by = "sample") %>%
+  filter(!is.na(module_abundance))
+head(data_module_merged)
+
+
+##########################################
+# Spearman for each module
+##########################################
+# Run Spearman
+module_spearman <- 
+  data_module_merged %>%
+  group_by(Module) %>%
+  summarise(cor_value = cor.test(module_abundance, pH.H2O., method = "spearman", use = "complete.obs")$estimate,
+            p_value = cor.test(module_abundance, pH.H2O., method = "spearman", use = "complete.obs")$p.value,
+            mean_abundance = mean(module_abundance, na.rm = TRUE)) %>%
+  filter(!is.na(cor_value) & cor_value != 0) %>%  # Remove rows where cor_value is NA or 0
+  ungroup() 
+head(module_spearman)
+
+# Merge with module ID list
+module_spearman <- merge(module_spearman, data_module_ID, by.x = "Module", by.y = "ID")
+head(module_spearman)
+
+# Organize and sort the data
+module_spearman_table <- module_spearman %>%
+  arrange(Type, Large_category, Small_category, desc(cor_value)) %>%
+  select(Type, Large_category, Small_category, Module, Name, cor_value, p_value, mean_abundance, Origin)
+
+# Save
+#write.csv(module_spearman_table, paste0(save_plot_path, "/module_spearman_results.csv"), row.names = FALSE)
+
+##########################################
+# Filter
+##########################################
+# Filter the modules relating to N metabolisms and environmental infomation processing
+module_spearman_filtered <- module_spearman_table %>%
+  filter(
+    (Type == "Pathway" & Large_category == "Energy metabolism") & Small_category == "Nitrogen metabolism" |
+    (Type == "Complex" & Large_category == "Environmental information processing" & Small_category == "Mineral and organic ion transport system") |
+    (Type == "Complex" & Large_category == "Environmental information processing" & Small_category == "Phosphate and amino acid transport system") |
+    (Type == "FuncSet" & Large_category == "Environmental information processing" & Small_category == "Two-component regulatory system")
+  )
+head(module_spearman_filtered)
+
+# Choose Pathway and Complex, and create the plot
+module_pathway_complex <- 
+  module_spearman_filtered %>%
+  filter(Type == "Pathway" | Type == "Complex",
+         p_value < 0.05) %>%
+  arrange(desc(cor_value))
+
+# Delete term after "," in the Name column
+module_pathway_complex$Name <- gsub(",.*", "", module_pathway_complex$Name)
+module_pathway_complex$Name <- gsub(" system", "", module_pathway_complex$Name)
+
+# Set the desired order
+desired_order <- c("Nitrogen metabolism", "Phosphate and amino acid transport system", "Mineral and organic ion transport system")
+module_pathway_complex$Small_category <- factor(module_pathway_complex$Small_category, levels = desired_order)
+
+# Order the data frame by Small_category (in the desired display order) and then by cor_value
+module_pathway_complex <- module_pathway_complex %>%
+  arrange(desc(Small_category), cor_value) %>%
+  mutate(Name = factor(Name, levels = unique(Name))) # This relevels Name based on the arranged order
+
+# Plot
+module_pathway_complex_plot <-
+  ggplot(module_pathway_complex, aes(x = Name, y = cor_value, fill = Small_category)) +
+  geom_bar(stat = "identity") +
+  coord_flip() + # Flips the axes, affecting how the factor levels are displayed
+  labs(y = "Spearman correlation", x = "", title = "") +
+  theme_classic() +
+  theme(axis.title = element_text(size = 12),
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 12),
+        legend.position = "bottom", 
+        legend.title = element_blank()) +
+  scale_y_continuous(limits = c(-1, 1)) + # Adjust the y-axis scale
+  scale_fill_brewer(palette = "Set1") + 
+  guides(fill = guide_legend(nrow = 3, byrow = TRUE, title.position = 'left'))
+
+# Choose FuncSet
+module_funcset <- 
+  module_spearman_filtered %>%
+  filter(Type == "FuncSet",
+         p_value < 0.05) %>%
+  arrange(desc(cor_value))
+
+# Delete "two-component regulatory system" in the Name column
+module_funcset$Name <- gsub(" two-component regulatory system", "", module_funcset$Name)
+
+# Plot
+module_funcset_plot <- 
+  ggplot(module_funcset, aes(x = reorder(Name, cor_value), y = cor_value, fill = Small_category)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(y = "Spearman correlation", x = "", title = "") +
+  theme_classic() +
+  theme(axis.title = element_text(size = 12),
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 12),
+        legend.position = "bottom", 
+        legend.title = element_blank()) +
+  scale_y_continuous(limits = c(-1, 1)) + # Adjust the y-axis scale
+  scale_fill_brewer(palette = "Set3")
+
+print(module_pathway_complex_plot)
+print(module_funcset_plot)
+
+# Save
+ggsave(paste0(Figure_path, "Figure5A_module_spearman.pdf"), module_pathway_complex_plot, width = 8, height = 6, dpi = 300)
+ggsave(paste0(Figure_path, "Figure5B_module_spearman.pdf"), module_funcset_plot, width = 8, height = 6, dpi = 300)
+
+```

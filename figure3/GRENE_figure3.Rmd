@@ -1,0 +1,416 @@
+---
+title: "GRENE_figure3"
+author: "Kazuo Isobe and Yaping Liu"
+date: "2025-08-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      dev = "png")
+```
+
+```{r library,results='hide'}
+#library R packages.
+library(vegan)
+library(ggplot2)
+library(ggpmisc)
+library(here)
+library(tidyverse)
+library(dplyr)#rename
+library(ggsignif)
+library(cowplot)
+library(rfPermute)
+library(tidyr)
+library(gdm)
+library(geosphere)
+library(plspm) # SEM
+library(rstatix)
+library(reshape)#melt
+library(kableExtra)#output of table
+library(linkET)#mantel
+library(phyloseq)
+library(ggpubr) #stat_compare_means
+```
+
+```{r path}
+#Use the "here" function to use relative path.
+here::here("dataanalysis")
+```
+
+```{r get data,base data, microbial data and GDM output data}
+# get base data
+data_path <- here("dataanalysis/00data/rawdata","ASV-sample.csv")
+data_base <- read.csv(data_path)
+
+data_path_38 <- here("dataanalysis/00data","sem_for_alpha2_38.txt")
+data_base_38 <- read.csv(data_path_38, header = TRUE, sep = "\t", row.names = 1)
+
+data_path_190 <- here("dataanalysis/00data","sem_beta190.txt")
+data_base_190 <- read.csv(data_path_190, header = TRUE, sep = "\t", row.names = 1)
+
+# get microbial data
+## bacteria
+otu_tab_bac_path <- here("dataanalysis/00data/rawdata","Bac-count.csv")
+otu_tab_bac <- read.csv(otu_tab_bac_path,fileEncoding = "UTF-8-BOM")
+
+tax_tab_bac_path <- here("dataanalysis/00data/rawdata","Bac-taxonomy.csv")
+tax_tab_bac <- read.csv(tax_tab_bac_path,fileEncoding = "UTF-8-BOM")
+
+## fungi
+otu_tab_fung_path <- here("dataanalysis/00data/rawdata","fungi-count.csv")
+otu_tab_fung <- read.csv(otu_tab_fung_path,fileEncoding = "UTF-8-BOM")
+
+tax_tab_fung_path <- here("dataanalysis/00data/rawdata","fungi-taxonomy.csv")
+tax_tab_fung <- read.csv(tax_tab_fung_path,fileEncoding = "UTF-8-BOM")
+
+# get gdm output
+gdm_bac_path <- here("dataanalysis/00data","GRENE_bac_GDM_ispline.txt")
+gdm_bac <- read.csv(gdm_bac_path, header = TRUE, sep = "\t", row.names = 1)
+
+gdm_fung_path <- here("dataanalysis/00data","GRENE_fung_GDM_ispline.txt")
+gdm_fung <- read.csv(gdm_fung_path, header = TRUE, sep = "\t", row.names = 1)
+
+# get function data
+KO_N_path <-  here("dataanalysis/00data","KO_nitrogen_summary_38.txt")
+KO_N <- read.csv(KO_N_path, header = TRUE, sep = "\t", row.names = 1)
+
+KO_path <- here("dataanalysis/00data","MAPLE_KO_summary_for_R_38.txt")
+KO <- read.csv(KO_path, header = TRUE, sep = "\t")
+KO_table <- KO %>%
+  group_by(KO) %>%  
+  summarise(across(everything(), sum))
+KO_table <- data.frame(KO_table)
+rownames(KO_table) <- KO_table$KO
+KO_table <- KO_table[,-1]
+
+```
+
+```{r import data into phyloseq}
+# Import into phyloseq
+## Bacteria
+row.names(otu_tab_bac) <- otu_tab_bac$OTU
+otu_tab_bac <- otu_tab_bac %>% select(-OTU)
+row.names(tax_tab_bac) <- tax_tab_bac$OTU
+tax_tab_bac <- tax_tab_bac %>% select (-OTU) 
+row.names(data_base) <- data_base$sample
+samples <- data_base %>% select (-sample)
+otu_tab_bac <- as.matrix(otu_tab_bac)  # Transform into matrixes otu and tax tables
+tax_tab_bac <- as.matrix(tax_tab_bac)
+otu_tab_bac = otu_table(otu_tab_bac, taxa_are_rows = TRUE) # Transform into phyloseq readable format
+tax_tab_bac = tax_table(tax_tab_bac)
+samples = sample_data(data_base)
+physeq_bac <- phyloseq(otu_tab_bac, tax_tab_bac, samples)
+
+## Fungi
+row.names(otu_tab_fung) <- otu_tab_fung$OTU
+otu_tab_fung <- otu_tab_fung %>% select(-OTU)
+row.names(tax_tab_fung) <- tax_tab_fung$OTU
+tax_tab_fung <- tax_tab_fung %>% select (-OTU) 
+row.names(data_base) <- data_base$sample
+samples <- data_base %>% select (-sample)
+otu_tab_fung <- as.matrix(otu_tab_fung)    # Transform into matrixes otu and tax tables
+tax_tab_fung <- as.matrix(tax_tab_fung)
+otu_tab_fung = otu_table(otu_tab_fung, taxa_are_rows = TRUE) # Transform into phyloseq readable format
+tax_tab_fung = tax_table(tax_tab_fung)
+samples = sample_data(data_base)
+physeq_fungi <- phyloseq(otu_tab_fung, tax_tab_fung, samples)
+
+## N cycling
+physeq_N <- phyloseq(
+  otu_table(KO_N, taxa_are_rows = TRUE),
+  sample_data(data_base_38)
+)
+
+## KO
+## N cycling
+physeq_KO <- phyloseq(
+  otu_table(KO_table, taxa_are_rows = TRUE),
+  sample_data(data_base_38)
+)
+
+```
+
+
+```{r output path}
+Figure_path <- "C:/Users/alip/Dropbox/Yaping/GRENE/paper/Revise_submit_20250728/Revise_submit_20250728/RScriptsandFigures/"
+```
+
+>**Figure3: Cascading relationship from landscape factors, soil habitat properties, and microbiome to N cycling**
+
+```{r calculate the number of KO genes and n cycling genes}
+# Rarefy OTU table
+## N cycling genes
+set.seed(99)
+physeq.r.N <- rarefy_even_depth(physeq_N, sample.size =min(sample_sums(physeq_N)),rngseed = FALSE, replace = TRUE, trimOTUs = TRUE, verbose = TRUE)
+physeq.r.N
+#write.table(otu_table(physeq.r.N), file = here("dataanalysis/00data/rawdata","N-cycling-38.txt"),sep = "\t",row.names = T,col.names = NA,quote = F)
+physeq.r.KO <- rarefy_even_depth(physeq_KO, sample.size =min(sample_sums(physeq_KO)),rngseed = FALSE, replace = TRUE, trimOTUs = TRUE, verbose = TRUE)
+physeq.r.KO
+#write.table(otu_table(physeq.r.KO), file = here("dataanalysis/00data/rawdata","KO-38.txt"),sep = "\t",row.names = T,col.names = NA,quote = F)
+
+# Calculate Alpha diversity(Richness)
+richness_Ngene <- estimate_richness(physeq.r.N, measures=c("Observed")) #the number of ASVs
+colnames(richness_Ngene) <- "richness_N"
+richness_KOgene <- estimate_richness(physeq.r.KO, measures=c("Observed")) #the number of ASVs
+colnames(richness_KOgene) <- "richness_KO"
+
+data_N_richness <- merge(data_base_38,richness_Ngene, by = "row.names")
+rownames(data_N_richness) <- data_N_richness$Row.names
+data_N_richness <- merge(data_N_richness,richness_KOgene, by = "row.names")
+rownames(data_N_richness) <- data_N_richness$Row.names
+data_N_richness <- data_N_richness[,-c(1:2)]
+
+```
+
+
+```{r Figure3B_SEM_alpha}
+#data for SEM_alpha(no data: -TMC, -TMN)
+data_N_richness[is.na(data_N_richness)]<-0
+colnames(data_N_richness)
+data_N_richness <- data_N_richness %>%
+  mutate(
+    GMIN_GNIT_GMIN_reverse = -1 * GMIN_GNIT_GMIN
+  )
+#write.csv(data_N_richness, here("dataanalysis/00data","data_N_richness.csv"))
+
+data_N_richness_scale <- data_N_richness
+data_N_richness_scale[,c("Dominant_tree_type_1","soil_type","pH.H2O.",'Total.C', 'Total.N',"richness_bac", "richness_fungi","richness_N","MAT","MAP","GNIT_GMIN","GMIN_GNIT_GMIN","GMIN","GNIT","GNH4C","GNO3C","GMIN_GNIT_GMIN_reverse")]<- scale(data_N_richness[,c("Dominant_tree_type_1","soil_type","pH.H2O.",'Total.C', 'Total.N',"richness_bac", "richness_fungi","richness_N","MAT","MAP","GNIT_GMIN","GMIN_GNIT_GMIN","GMIN","GNIT","GNH4C","GNO3C","GMIN_GNIT_GMIN_reverse")])
+
+#Specifies the latent variable and stores the relationship between the variable and the latent variable as a list in R
+dat_blocks_alpha <- list(
+  Climate = c("MAT","MAP"),
+  Vegetation="Dominant_tree_type_1",
+  Soiltype="soil_type",
+  pH="pH.H2O.",
+  SOM= c('Total.C', 'Total.N'), 
+  richness = c('richness_fungi','richness_bac'),
+  N_cycling_richness="richness_N",
+  Rate=c("GMIN","GNIT","GNH4C","GNO3C"),
+  Openess=c('GNIT_GMIN','GMIN_GNIT_GMIN_reverse'))
+#The association between latent variables is described by 0-1 matrix, where 0 means that there is no association between variables and 1 means that there is association
+Climate <- c(0,0, 0, 0, 0, 0,0, 0,0)
+Vegetation <- c(0,0, 0, 0, 0, 0,0, 0,0)
+Soiltype <- c(0,0, 0, 0, 0, 0,0, 0,0)
+pH<- c(1,1, 1, 0, 0, 0,0, 0,0)
+SOM<- c(1,1, 1, 0, 0, 0,0, 0,0)
+richness <- c(0,0, 0, 1, 1, 0,0, 0,0)
+N_cycling_richness<- c(0,0, 0, 0, 0, 1,0, 0,0)
+Rate<- c(0,0, 0, 0, 0, 1,0, 0,0)
+Openess<- c(0,0, 0, 0, 0, 1,0, 0,0)
+dat_path_alpha <- rbind(Climate,Vegetation, Soiltype, pH, SOM, richness, N_cycling_richness,Rate,Openess)
+colnames(dat_path_alpha) <- rownames(dat_path_alpha)
+#innerplot can see if the association is correct
+innerplot(dat_path_alpha)
+#Specify the direction of variables, optionally A (for the column is the cause of the row) or B (for the row is the cause of the column)
+dat_modes_alpha <- c("B","B","B","A", "A","A","A","A","A")
+dat_pls_alpha <- plspm(data_N_richness_scale, dat_path_alpha, dat_blocks_alpha, modes = dat_modes_alpha,boot.val = TRUE,br=1000)
+summary(dat_pls_alpha)
+
+```
+
+```{r Figure3A_sem_beta}
+data_base_190[is.na(data_base_190)]<-0
+data_base_190$GMIN_GNIT_GMIN <- data_base_190$GMIN_GNIT_GMIN*-1
+
+data_base_190[,c(2:16,18:41,44)]<- scale(data_base_190[,c(2:16,18:41,44)])
+
+data_base_190 <- na.omit(data_base_190)
+library(dplyr)
+data_base_190 <- data_base_190 %>% mutate_if(is.character, as.factor)
+str(data_base_190)
+## SEM
+#Specify latent variables.
+colnames(data_base_190)
+dat_blocks <- list(
+  treetype="Dominant_tree_type_1",
+  soiltype='soil_type',
+  climate=c('MAT','MAP'),
+  pH="pH.H2O.",
+  SOM=c("Total.C",'Total.N'),
+  NMDS1_bac='NMDS1_bac',
+  NMDS1_fungi='NMDS1_fungi',
+  Bacterialabundance= 'Bacterial.16S',
+  Openness=c('GNIT_GMIN','GMIN_GNIT_GMIN'),
+  NCR=c("GMIN","GNIT","GNH4C","GNO3C"))
+
+dat_blocks
+#The association between latent variables is described through a 0-1 matrix, where 0 indicates no association between the variables and 1 indicates an association.
+treetype <- c(0, 0, 0, 0, 0,0,0, 0, 0, 0)
+soiltype<- c(0, 0, 0, 0, 0,0,0, 0, 0, 0)
+climate<- c(0, 0, 0, 0, 0,0,0, 0, 0, 0)
+pH<-c(1, 1, 1,0, 0,0,0, 0, 0, 0)
+SOM<- c(1,1, 1, 0, 0,0,0, 0, 0, 0)
+NMDS1_bac<- c(0, 0,0,1,1,0, 0, 0, 0, 0)
+NMDS1_fungi<- c(0, 0,0,1,1,0, 0, 0,0,  0)
+Bacterialabundance<- c(0, 0,0,1,1,0,0, 0,  0, 0)
+Openness<- c(0, 0, 0, 0, 0,1,1,1,0, 0)
+NCR<-c(0, 0, 0, 0, 0,1,1,1,0, 0)
+
+dat_path <- rbind(treetype,soiltype,climate,pH,SOM,NMDS1_bac,NMDS1_fungi,Bacterialabundance,Openness,NCR)
+
+colnames(dat_path) <- rownames(dat_path)
+dat_path
+#innerplot can be used to check if the relationship diagram is correct
+innerplot(dat_path)
+dat_modes <- c("B","B","A","A","A","A", "A","A","A", "A")
+dat_modes
+dat_pls <- plspm(data_base_190, dat_path, dat_blocks, modes = dat_modes,boot.val = TRUE,br=1000)
+summary(dat_pls)
+
+```
+
+
+```{r Figure3C_bacterial abundance vs. N cycling rate}
+
+head(data_base) 
+
+# Replace negative values with zero
+data_base <- data_base %>%
+  mutate(GMIN = ifelse(GMIN < 0, 0, GMIN),
+         GNIT = ifelse(GNIT < 0, 0, GNIT),
+         GNH4C = ifelse(GNH4C < 0, 0, GNH4C),
+         GNO3C = ifelse(GNO3C < 0, 0, GNO3C))
+
+## Standardize the data
+data_base <- data_base %>%
+  mutate(across(c(GMIN, GNIT, GNH4C, GNO3C), ~scale(.)[, 1], .names = "std_{.col}"))
+
+## Merge as "N-cycling rate" by calculating the mean of standardized values for each row
+data_base <- data_base %>%
+  rowwise() %>%
+  mutate(N_cycling_rate = mean(c_across(starts_with("std_")), na.rm = TRUE)) %>%
+  ungroup()
+
+## Check the resulting data
+glimpse(data_base)
+
+## Calculate statistics for Bacterial.16S
+stats_bacterial_rate <- cor.test(data_base$Bacterial.16S, data_base$N_cycling_rate, method = "pearson")
+stats_fungal_rate <- cor.test(data_base$Fungal.18S, data_base$N_cycling_rate, method = "pearson")
+
+## Plot
+RatevsAbundance_plot <- 
+  ggplot(data_base, aes(x = Bacterial.16S, y = N_cycling_rate)) +  # Set common aes
+  geom_point(aes(fill = Total.N), shape = 21, colour = "#56B4E9", size = 2) +  # Set fill here
+  geom_smooth(method = "lm", se = FALSE, aes(group = 1), color = "#56B4E9") +  # Add 'group = 1' if needed
+  theme_classic() +
+  theme(axis.title = element_text(size = 12), 
+        axis.text = element_text(size = 10),
+        legend.position = "right") +
+  labs(x = "Bacterial abundance (/g-soil)", y = "N-cycling rate (standardized)", fill = " Soil N content\n(%)", title = "") +
+  scale_fill_gradient(low = "white", high = "#56B4E9") +  # Apply gradient fill to points 
+  scale_y_continuous(limits = c(-1, 5), breaks = seq(-1, 4, by = 1)) + 
+  annotate("text", x = 0, y = 4.5, 
+           label = sprintf("Bacteria: R = %.2f, P < 0.001", stats_bacterial_rate$estimate),
+           hjust = 0, size = 3.5, color = "#56B4E9") 
+print(RatevsAbundance_plot)
+
+# Save
+ggsave(paste0(Figure_path, "Figure3C_BacAbundNRate.pdf"), 
+       RatevsAbundance_plot, width = 4, height = 3, dpi = 300)
+```
+
+
+```{r Figure3D_Microbial composition vs. N allocation}
+data_base_190 <- read.csv(data_path_190, header = TRUE, sep = "\t", row.names = 1)
+# Replace negative values with zero
+data_base_190 <- data_base_190 %>%
+  mutate(GMIN = ifelse(GMIN < 0, 0, GMIN),
+         GNIT = ifelse(GNIT < 0, 0, GNIT),
+         GNH4C = ifelse(GNH4C < 0, 0, GNH4C),
+         GNO3C = ifelse(GNO3C < 0, 0, GNO3C))
+
+# Calculate new ratios
+## equation 1
+## nitrification (GNIT) divided by ammonification (GMIN)
+## higher -> open
+## equation 2
+## (ammonification (GMIN) - nitrification (GNIT)) divided by ammonification (GMIN)
+## higher -> closed
+
+data_base_190 <- data_base_190 %>%
+  mutate(
+    GNIT_div_GMIN = GNIT / GMIN,
+    GMIN_minus_GNIT_div_GMIN = ((GMIN - GNIT) / GMIN)
+  )
+
+data_base_190 <- data_base_190 %>%
+  mutate(
+    GMIN_minus_GNIT_div_GMIN = ifelse(GMIN_minus_GNIT_div_GMIN < 0, 0, GMIN_minus_GNIT_div_GMIN),
+    GMIN_minus_GNIT_div_GMIN_rev = 1 - GMIN_minus_GNIT_div_GMIN
+  )
+
+data_asv_allocation <- data_base_190 %>%
+  mutate(
+    std_GNIT_div_GMIN = scale(GNIT_div_GMIN, center = TRUE, scale = TRUE)[,1],
+    std_GMIN_minus_GNIT_div_GMIN = scale(GMIN_minus_GNIT_div_GMIN, center = TRUE, scale = TRUE)[,1],
+    std_GMIN_minus_GNIT_div_GMIN_rev = scale(GMIN_minus_GNIT_div_GMIN_rev, center = TRUE, scale = TRUE)[,1]
+  )
+
+## Merge as "N allocation" by calculating the mean of standardized values for each row
+data_asv_allocation <- data_asv_allocation %>%
+  rowwise() %>%
+  mutate(
+    N_allocation = mean(c(std_GNIT_div_GMIN, std_GMIN_minus_GNIT_div_GMIN_rev), na.rm = TRUE)
+  ) %>%
+  ungroup()
+
+## Check the resulting data
+glimpse(data_asv_allocation)
+
+## Calculate statistics with standarized value
+stats_bacterial_allocation_std <- cor.test(data_asv_allocation$NMDS1_bac, data_asv_allocation$N_allocation, method = "pearson")
+stats_fungal_allocation_std <- cor.test(data_asv_allocation$NMDS1_fungi, data_asv_allocation$N_allocation, method = "pearson")
+
+## Plot with standarized value
+Allocation_stdvsBacComposition_plot <- 
+  ggplot(data_asv_allocation, aes(x = NMDS1_bac, y = N_allocation)) +  # Set common aes
+  geom_point(aes(fill = pH.H2O.), shape = 21, colour = "#56B4E9", size = 2) +  # Set fill here
+  geom_smooth(method = "lm", se = FALSE, aes(group = 1), color = "#56B4E9") +  # Add 'group = 1' if needed
+  theme_classic() +
+  theme(axis.title = element_text(size = 12), 
+        axis.text = element_text(size = 10),
+        legend.position = "right") +
+  labs(x = "MDS1 (Bacteria)", y = "N allocation (standarized)", fill = " Soil pH", title = "") +
+  scale_fill_gradient(low = "white", high = "#56B4E9") +  # Apply gradient fill to points 
+  scale_y_continuous(limits = c(-1, 3), breaks = seq(-1, 3, by = 1)) + 
+  annotate("text", x = -2, y = 3, 
+           label = sprintf("Bacteria: R = %.2f, P = %.3f", 
+                           stats_bacterial_allocation_std$estimate, 
+                           stats_bacterial_allocation_std$p.value),
+           hjust = 0, size = 3.5, color = "#56B4E9") 
+print(Allocation_stdvsBacComposition_plot)
+
+# Save
+ggsave(paste0(Figure_path, "Figure3D_BacCompNAlloc.pdf"), 
+       Allocation_stdvsBacComposition_plot, width = 3.5, height = 3, dpi = 300)
+
+```
+
+
+```{r Figure3E_bacterial richness vs. N genes richness}
+## Calculate statistics for Bacterial.16S
+stats_bacterial_N <- cor.test(data_N_richness$richness_bac, data_N_richness$richness_N, method = "pearson")
+
+## Plot
+BacvsN_Richness <- 
+  ggplot(data_N_richness, aes(x = richness_bac, y = richness_N)) +  # Set common aes
+  geom_point(aes(fill = pH.H2O.), shape = 21, colour = "#56B4E9", size = 2) +  # Set fill here
+  geom_smooth(method = "lm", se = FALSE, aes(group = 1), color = "#56B4E9") +  # Add 'group = 1' if needed
+  theme_classic() +
+  theme(axis.title = element_text(size = 12), 
+        axis.text = element_text(size = 10),
+        legend.position = "right") +
+  labs(x = "Richness (Bacteria)", y = "N-cycling gene richness", fill = " Soil pH", title = "") +
+  scale_fill_gradient(low = "white", high = "#56B4E9") +  # Apply gradient fill to points 
+  #scale_y_continuous(limits = c(-1, 5), breaks = seq(-1, 4, by = 1)) + 
+  annotate("text", x = 2900, y = 29, 
+           label = sprintf("Bacteria: R = %.2f, P < 0.001", stats_bacterial_N$estimate),
+           hjust = 0, size = 3.5, color = "#56B4E9") 
+print(BacvsN_Richness)
+
+# Save
+ggsave(paste0(Figure_path, "Figure3E_BacNRichness.pdf"), 
+       BacvsN_Richness, width = 3.5, height = 3, dpi = 300)
+```
